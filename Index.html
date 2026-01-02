@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ekau Charles | Poetry & Novels</title>
+  <meta name="description" content="Explore the poetry and novels of Ekau Charles, a passionate author weaving stories and verses that delve into human emotion and imagination." />
+  <meta name="author" content="Ekau Charles, Poet & Novelist" />
+  <meta property="og:title" content="Ekau Charles | Poetry & Novels" />
+  <meta property="og:description" content="Explore the poetry and novels of Ekau Charles, a passionate author weaving stories and verses that delve into human emotion and imagination." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ekaucharles.com/" />
+  <meta property="og:image" content="https://ekaucharles.com/img/open_vintage_book_2.webp" />
+  <link rel="preload" href="img/open_vintage_book_2.webp" as="image" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Libre+Baskerville&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    /* [ALL YOUR EXISTING CSS REMAINS IDENTICAL - NO CHANGES NEEDED HERE] */
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Libre Baskerville', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFFFF0;
+      color: #333333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+      color: #0A1828;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      transition: color 0.3s;
+    }
+    a {
+      color: #0A1828;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover, a:focus {
+      color: #957C3D;
+      outline: none;
+    }
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #957C3D;
+      color: #FFFFF0;
+      padding: 8px 16px;
+      z-index: 100;
+      transition: top 0.3s;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    header {
+      background-color: #BFA181;
+      padding: 1em 2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .logo { height: 100px; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      align-items: center;
+    }
+    nav a {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5em 0.75em;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    nav a:hover, nav a:focus {
+      background-color: #957C3D;
+      color: #FFFFF0;
+    }
+    nav a[aria-current="page"] {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      cursor: default;
+    }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #0A1828;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .nav-toggle:hover, .nav-toggle:focus {
+      color: #957C3D;
+      outline: none;
+    }
+    #nav-menu.open {
+      display: flex !important;
+      flex-direction: column;
+      width: 100%;
+      background-color: #BFA181;
+      padding: 1em 0;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .search-container {
+      position: relative;
+      margin-left: 1em;
+      max-width: 250px;
+      width: 100%;
+    }
+    .search-input-wrapper {
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 0.4em 2.5em 0.4em 0.75em;
+      font-size: 1rem;
+      border: 2px solid #957C3D;
+      border-radius: 4px;
+      font-family: 'Libre Baskerville', serif;
+    }
+    .search-icon {
+      position: absolute;
+      right: 0.75em;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #957C3D;
+      pointer-events: none;
+      font-size: 1.1rem;
+    }
+    .search-results {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      right: 0;
+      background: #FFF9E6;
+      border: 1px solid #957C3D;
+      border-radius: 0 0 4px 4px;
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 200;
+      display: none;
+      font-family: 'Libre Baskerville', serif;
+    }
+    .search-results a {
+      display: block;
+      padding: 0.5em 0.75em;
+      color: #0A1828;
+      border-bottom: 1px solid #BFA181;
+    }
+    .search-results a:last-child {
+      border-bottom: none;
+    }
+    .search-results a:hover, .search-results a:focus {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      outline: none;
+    }
+    #dark-mode-toggle {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #0A1828;
+      transition: color 0.3s;
+      margin-left: 1em;
+    }
+    #dark-mode-toggle:hover, #dark-mode-toggle:focus {
+      color: #957C3D;
+      outline: none;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      .nav-toggle {
+        display: block;
+      }
+      .search-container {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 0.5em;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav#nav-menu.open {
+        display: flex !important;
+      }
+    }
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 70vh;
+      min-height: 400px;
+      background: url('img/open_vintage_book_2.webp') center center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0A1828;
+      font-family: 'Libre Baskerville', serif;
+      text-align: center;
+      padding: 0 1em;
+      border-radius: 0.5em;
+      overflow: hidden;
+      margin-bottom: 3em;
+      transition: background-color 0.3s;
+    }
+    .hero .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 240, 0.7);
+      pointer-events: none;
+      transition: background-color 0.3s;
+    }
+    .hero-text {
+      position: relative;
+      max-width: 800px;
+      z-index: 1;
+    }
+    .hero-text h1 {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+      color: #0A1828;
+      transition: color 0.3s;
+    }
+    .hero-text p {
+      font-size: 1.3rem;
+      line-height: 1.5;
+      color: #0A1828;
+      max-width: 600px;
+      margin: 0 auto;
+      transition: color 0.3s;
+    }
+    .hero-cta {
+      margin-top: 1.5em;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #957C3D;
+      color: #FFFFF0;
+      padding: 0.75em 1.5em;
+      border-radius: 4px;
+      font-weight: 700;
+      font-family: 'League Spartan', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background-color 0.3s, color 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn:hover, .btn:focus {
+      background-color: #BFA181;
+      color: #0A1828;
+      outline: none;
+    }
+    .tagline {
+      text-align: center;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 1.25rem;
+      color: #957C3D;
+      margin-top: -1.5em;
+      margin-bottom: 3em;
+      letter-spacing: 1.2px;
+      transition: color 0.3s;
+    }
+    .featured-book {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      align-items: center;
+      margin-bottom: 3em;
+      background: #FFF9E6;
+      border-radius: 0.5em;
+      padding: 1.5em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .featured-book img {
+      max-width: 250px;
+      width: 100%;
+      border-radius: 0.5em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .featured-book img:hover, .featured-book img:focus {
+      transform: scale(1.05);
+      outline: 2px solid #957C3D;
+    }
+    .book-details {
+      flex: 1;
+      font-family: 'Libre Baskerville', serif;
+    }
+    .book-details h2 {
+      margin-top: 0;
+      color: #0A1828;
+      font-size: 2rem;
+      transition: color 0.3s;
+    }
+    .book-details p {
+      font-size: 1.1rem;
+      margin: 1em 0;
+      color: #333333;
+      transition: color 0.3s;
+    }
+    .about-preview {
+      background: #FFF9E6;
+      padding: 2em;
+      border-radius: 0.5em;
+      margin-bottom: 3em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 2em;
+      align-items: center;
+      flex-wrap: wrap;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .about-photo {
+      flex: 0 0 180px;
+      width: 180px;
+      height: 240px;
+      border-radius: 50% / 60%;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .about-caption {
+      font-size: 0.95rem;
+      color: #957C3D;
+      text-align: center;
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+      width: 100%;
+      order: 2;
+    }
+    .about-text {
+      flex: 1;
+      font-family: 'Libre Baskerville', serif;
+      color: #333333;
+      transition: color 0.3s;
+      min-width: 220px;
+    }
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    @media (max-width: 768px) {
+      .featured-book,
+      .about-preview {
+        flex-direction: column;
+        text-align: center;
+      }
+      .book-details,
+      .about-text {
+        max-width: 100%;
+      }
+      .about-photo {
+        width: 120px;
+        height: 160px;
+      }
+      .about-caption {
+        margin-bottom: 0.5em;
+      }
+      .about-photo {
+        margin-bottom: 0;
+      }
+    }
+    .newsletter {
+      background: #FFF9E6;
+      padding: 2em;
+      border-radius: 0.5em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      margin-bottom: 3em;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .newsletter h2 {
+      margin-bottom: 0.5em;
+      font-family: 'League Spartan', sans-serif;
+      color: #0A1828;
+      transition: color 0.3s;
+    }
+    .newsletter form {
+      margin-top: 1em;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5em;
+    }
+    .newsletter input[type="email"] {
+      padding: 0.75em 1em;
+      font-size: 1rem;
+      border: 2px solid #957C3D;
+      border-radius: 4px;
+      width: 250px;
+      max-width: 100%;
+      font-family: 'Libre Baskerville', serif;
+      transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    }
+    .newsletter button {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      border: none;
+      padding: 0.75em 1.5em;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .newsletter button:hover, .newsletter button:focus {
+      background-color: #BFA181;
+      color: #0A1828;
+      outline: none;
+    }
+    .validation-message {
+      font-size: 0.9rem;
+      color: #957C3D;
+      margin-top: 0.5em;
+      display: none;
+      transition: color 0.3s;
+    }
+    .validation-message.error { color: #b00020; }
+    .validation-message.success { color: #0a7a0a; }
+    .testimonials {
+      margin-bottom: 3em;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .testimonials h2 {
+      text-align: center;
+      font-family: 'League Spartan', sans-serif;
+      color: #0A1828;
+      margin-bottom: 1em;
+      transition: color 0.3s;
+    }
+    .testimonial-item {
+      background: #FFF9E6;
+      border-radius: 0.5em;
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-style: italic;
+      color: #333333;
+      font-family: 'Libre Baskerville', serif;
+      transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    }
+    .testimonial-author {
+      margin-top: 1em;
+      font-weight: 700;
+      text-align: right;
+      color: #0A1828;
+      font-family: 'League Spartan', sans-serif;
+      transition: color 0.3s;
+    }
+    .footer {
+      background: #BFA181;
+      color: #0A1828;
+      text-align: center;
+      padding: 1.2em 0;
+      transition: background 0.4s, color 0.4s;
+    }
+    .footer a {
+      color: inherit;
+      text-decoration: underline;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 600;
+      font-size: 1em;
+      transition: color 0.2s;
+    }
+    .footer a:hover { color: #957C3D; }
+    .footer .social-icons { margin-top: 1em; }
+    .footer .social-icons a {
+      color: #0A1828;
+      margin: 0 0.18em;
+      font-size: 1.15em;
+      text-decoration: none;
+      transition: color 0.2s;
+      vertical-align: middle;
+    }
+    .footer .social-icons a:hover { color: #957C3D; }
+    .footer p { margin: 1em 0 0 0; }
+    @media (max-width: 600px) {
+      .footer { padding: 1em 0; }
+      .logo { height: 58px; }
+      .site-title { font-size: 1.3rem; }
+      .footer .social-icons { font-size: 1em; }
+    }
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #E0E0E0;
+    }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+      color: #FFD966;
+    }
+    body.dark-mode a {
+      color: #FFD966;
+    }
+    body.dark-mode a:hover, body.dark-mode a:focus {
+      color: #FFC107;
+    }
+    body.dark-mode header {
+      background-color: #333333;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    }
+    body.dark-mode .footer {
+      background-color: #333333;
+      color: #FFD966;
+    }
+    body.dark-mode nav a {
+      color: #FFD966;
+    }
+    body.dark-mode nav a:hover, body.dark-mode nav a:focus {
+      background-color: #FFC107;
+      color: #121212;
+    }
+    body.dark-mode .search-input {
+      background-color: #333333;
+      color: #E0E0E0;
+      border-color: #FFD966;
+    }
+    body.dark-mode .search-results {
+      background: #222222;
+      border-color: #FFD966;
+      color: #E0E0E0;
+    }
+    body.dark-mode .search-results a {
+      color: #FFD966;
+      border-bottom: 1px solid #BFA181;
+    }
+    body.dark-mode .search-results a:hover, .search-results a:focus {
+      background-color: #FFC107;
+      color: #121212;
+    }
+    body.dark-mode .hero .overlay {
+      background: rgba(18, 18, 18, 0.7);
+    }
+    body.dark-mode .hero-text p,
+    body.dark-mode .hero-text h1 {
+      color: #FFD966;
+    }
+    body.dark-mode .tagline {
+      color: #FFC107;
+    }
+    body.dark-mode .featured-book,
+    body.dark-mode .about-preview,
+    body.dark-mode .newsletter,
+    body.dark-mode .testimonial-item {
+      background: #222222;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+      color: #E0E0E0;
+    }
+    body.dark-mode .btn {
+      background-color: #FFD966;
+      color: #121212;
+    }
+    body.dark-mode .btn:hover, body.dark-mode .btn:focus {
+      background-color: #FFC107;
+      color: #121212;
+    }
+    body.dark-mode input[type="email"] {
+      background-color: #333333;
+      color: #E0E0E0;
+      border-color: #FFD966;
+    }
+    body.dark-mode input[type="email"]::placeholder {
+      color: #ccc;
+    }
+    body.dark-mode .validation-message.error {
+      color: #ff6b6b;
+    }
+    body.dark-mode .validation-message.success {
+      color: #90ee90;
+    }
+    body.dark-mode .social-icons a {
+      color: #FFD966;
+    }
+    body.dark-mode .social-icons a:hover {
+      color: #FFC107;
+    }
+    .site-intro {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1.5em;
+      justify-content: center;
+    }
+    .site-intro-top {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.3rem;
+      color: #957C3D;
+      letter-spacing: 1px;
+      margin-bottom: -0.3em;
+    }
+    .site-intro-name {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: #0A1828;
+      font-weight: normal;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .dropdown > a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25em;
+      text-decoration: underline;
+      color: #0A1828;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #BFA181;
+      min-width: 160px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      padding: 0.5em 0;
+      z-index: 1000;
+      margin-top: 0.5em;
+      list-style: none;
+    }
+    
+    .dropdown-menu li a {
+      display: block;
+      padding: 0.5em 1em;
+      color: #0A1828;
+      text-decoration: none;
+      font-weight: 600;
+      font-family: 'League Spartan', sans-serif;
+    }
+    
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a:focus {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      outline: none;
+    }
+
+    /* UNDERLINE ALL NAVIGATION LINKS */
+    nav a,
+    .dropdown > a,
+    .dropdown-menu li a {
+      text-decoration: underline;
+    }
+    
+    /* REMOVE UNDERLINE ON HOVER (keeps visual feedback) */
+    nav a:hover, nav a:focus,
+    .dropdown > a:hover, .dropdown > a:focus,
+    .dropdown-menu li a:hover, .dropdown-menu li a:focus {
+      text-decoration: none;
+    }
+
+/* Show dropdown on hover and focus */
+    .dropdown:hover > .dropdown-menu,
+    .dropdown:focus-within > .dropdown-menu {
+      display: block;
+    }
+    
+/* Caret icon style */
+    .dropdown > a i {
+      font-size: 0.8rem;
+    }
+
+    nav a {
+      text-decoration: underline;  /* ALL nav links underlined */
+    }
+
+    /* Mobile Money Buttons */
+    .mobile-money {
+      margin-top: 1em;
+      display: flex;
+      gap: 0.5em;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .mobile-money a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.5em 1em;
+      background: #28a745;
+      color: white;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .mobile-money a:hover {
+      background: #218838;
+      color: white;
+    }
+    body.dark-mode .mobile-money a {
+      background: #FFD966;
+      color: #121212;
+    }
+    body.dark-mode .mobile-money a:hover {
+      background: #FFC107;
+      color: #121212;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <header>     
+    <img src="img/open_trademark.png" alt="Ekau Charles Logo" class="logo" loading="lazy" />
+    <div class="site-intro">
+      <span class="site-intro-top">Official Website of</span>
+      <span class="site-intro-name">Ekau Charles</span>
+    </div>
+    <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
+    <nav id="nav-menu" role="navigation" aria-label="Primary navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <div class="dropdown" tabindex="0">
+        <a href="#" id="works-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="works-submenu" onclick="toggleWorksDropdown(event)">
+          Works <i class="fas fa-caret-down"></i>
+        </a>
+        <ul id="works-submenu" class="dropdown-menu" role="menu" aria-label="Submenu for Works">
+          <li role="none"><a role="menuitem" href="poetry.html">Poetry</a></li>
+          <li role="none"><a role="menuitem" href="novels.html">Novels</a></li>
+          <li role="none"><a role="menuitem" href="short-stories.html">Short Stories</a></li>
+          <li role="none"><a role="menuitem" href="flash-fiction.html">Flash Fiction</a></li>
+          <li role="none"><a role="menuitem" href="prose.html">Prose</a></li>
+        </ul>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="search-container" role="search">
+      <div class="search-input-wrapper">
+        <input type="search" id="search-input" class="search-input" placeholder="Search site…" aria-label="Search site" autocomplete="off" />
+        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+      </div>
+      <div id="search-results" class="search-results" role="listbox" aria-live="polite"></div>
+    </div>
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero" role="banner" aria-label="Introduction">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1>Welcome to the Literary World of Ekau Charles</h1>
+        <p>Here, poetry and prose intertwine to explore the depths of human emotion, imagination, and storytelling. Dive into collections of heartfelt poems and captivating novels crafted to inspire and move you.</p>
+        <div class="hero-cta">
+          <a href="#featured-book-title" 
+             class="btn" 
+             onclick="dualPurposeCTA(event)"
+             aria-label="Read Target Vol. II - Latest Novel">Read Latest Book</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="tagline" aria-label="Author tagline">
+      Ekau Charles – Poet & Novelist Exploring the Depths of Human Emotion
+    </p>
+    
+    <section class="featured-book" aria-labelledby="featured-book-title">
+      <img src="covers/For_Her.webp" alt="Cover of latest book 'For Her' by Ekau Charles" loading="lazy" tabindex="0" role="button" aria-describedby="modal-desc" aria-haspopup="dialog" onclick="openModal()" onkeypress="if(event.key==='Enter'){openModal();}" />
+      <div class="book-details">
+        <h2 id="featured-book-title">Latest Release: "For Her"</h2>
+        <p>
+          In the wreckage of a tragic car accident, Alex Wise loses his wife, Natalie, and young daughter, Arlie—shattering his world and drowning him in grief and guilt. Three years later, he encounters Connie, a blind survivor of the same crash, whose haunting connection to his past reignites a flicker of hope. With his sister Camila's steadfast support, Alex confronts his demons and rebuilds amid unbearable pain. As his bond with Connie deepens, they navigate shared scars toward healing—until Alex makes the ultimate sacrifice to save her life. FOR HER is a heartfelt testament to resilience, forgiveness, and love's enduring power, proving that even in profound loss, redemption awaits.
+        </p>
+        <a href="novels.html#for-her" class="btn" aria-label="Read more about For Her">Read More</a>
+      </div>
+    </section>
+
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" tabindex="-1" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(10,24,40,0.8);justify-content:center;align-items:center;z-index:1000;">
+      <div style="background:#FFFFF0;color:#0A1828;max-width:600px;padding:2em;border-radius:8px;position:relative;box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+        <button aria-label="Close preview" onclick="closeModal()" style="position:absolute;top:1em;right:1em;background:none;border:none;font-size:1.5rem;color:#957C3D;cursor:pointer;">&times;</button>
+        <h3 id="modal-title" style="margin-top:0;">Excerpt from "For Her"</h3>
+        <p id="modal-desc" style="font-family:'Libre Baskerville', serif; line-height:1.6;">
+          She blew, felt the heat disappear, then return.
+        </p>
+        <p>
+          "Blow," he said again. She blew, not sure if he was teasing her, but she didn't mind.
+        </p>
+        <p>
+          He sat her upright, then she heard the sound of forks and a plate. "Alright, I have something for you. Open wide."
+        </p>
+        <p>
+          She opened her mouth, tasting chocolate cake. "Happy birthday, Connie Kurt."
+        </p>
+        <a href="novels.html#for-her" class="btn" style="margin-top:1em;">Read Full Chapter</a>
+      </div>
+    </div>
+
+    <section class="about-preview" aria-labelledby="about-preview-title">
+      <div>
+        <div class="about-photo">
+          <img src="img/IMG_20190905_1207181.webp" alt="Portrait of Ekau Charles" loading="lazy" />
+        </div>
+        <figcaption class="about-caption">Ekau Charles, author and poet</figcaption>
+      </div>
+      <div class="about-text">
+        <h2 id="about-preview-title">About Ekau Charles</h2>
+        <p>
+          Ekau Charles is a passionate poet and novelist whose work delves into the intricacies of human emotion and imagination. With a unique voice and lyrical style, Ekau invites readers to experience stories that resonate deeply and inspire reflection.
+        </p>
+        <a href="about.html" class="btn" aria-label="Learn more about Ekau Charles">Learn More</a>
+      </div>
+    </section>
+
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <h2 id="newsletter-title">Subscribe to My Newsletter</h2>
+      <p>Get exclusive poems, novel excerpts, and updates delivered straight to your inbox.</p>
+      <form id="newsletter-form" action="#" method="post" aria-label="Newsletter subscription form" novalidate>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true" aria-describedby="emailHelp" />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="emailHelp" class="validation-message" role="alert" aria-live="polite"></div>
+      <p style="font-size:0.8rem; margin-top:0.5em; color:#555;">We respect your privacy. <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</p>
+    </section>
+
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">What Readers Say</h2>
+      <article class="testimonial-item">
+        <p>"Ekau Charles' poetry touches the soul with its raw honesty and beauty. A truly gifted writer."</p>
+        <p class="testimonial-author">– Joseph M.</p>
+      </article>
+      <article class="testimonial-item">
+        <p>"The novel 'Stolen Hearts' is a masterpiece of emotional depth and lyrical storytelling."</p>
+        <p class="testimonial-author">– Jolly M.</p>
+      </article>
+      <article class="testimonial-item">
+        <p>"With his poetry, Ekau Charles offers readers a window into his world, sharing stories and emotions that resonate across cultures and generations."</p>
+        <p class="testimonial-author">– Ronald L.S.</p>
+      </article>
+      <article class="testimonial-item">
+        <p>"Ekau Charles crafts a story that is as emotionally resonant as it is suspenseful, exploring the costs of violence, the meaning of loyalty, and the enduring power of love in his novel 'Target'."</p>
+        <p class="testimonial-author">– Nathan O.</p>
+      </article>
+    </section>
+  
+  </main>
+
+  <div class="footer">
+    <div>
+      <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+      <a href="terms.html">Terms of Service</a> &nbsp;|&nbsp;
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/emegu.charles" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/EmeguCharles" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/charlito195" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/emegu-charles-99105b247" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ekaucharles" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=256700748964" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="margin-top:1em">&copy; 2025 Ekau Charles</p>
+    <p style="font-style: italic; font-size: 0.85rem; margin-top: 0.5em;">"Writing is the painting of the voice."</p>
+  </div>
+
+  <script>
+    // Mobile nav toggle
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      const expanded = nav.classList.toggle('open');
+      document.querySelector('.nav-toggle').setAttribute('aria-expanded', expanded);
+    }
+
+    // ✅ FIXED WORKS DROPDOWN FUNCTION
+    function toggleWorksDropdown(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const submenu = document.getElementById('works-submenu');
+      const toggle = document.getElementById('works-toggle');
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      submenu.style.display = expanded ? 'none' : 'block';
+    }
+
+    // ✅ DUAL PURPOSE CTA FUNCTION
+    function dualPurposeCTA(event) {
+      event.preventDefault();
+      
+      // Mobile: Jump to novels page
+      if (window.innerWidth <= 768) {
+        window.location.href = 'novels.html#for-her';
+        return;
+      }
+      
+      // Desktop: Smooth scroll to featured book
+      const featuredSection = document.querySelector('.featured-book');
+      if (featuredSection) {
+        featuredSection.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+
+    // Keyboard accessibility for dropdown
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+      dropdown.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleWorksDropdown(e);
+        }
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        if (!dropdown.contains(e.target)) {
+          const submenu = dropdown.querySelector('.dropdown-menu');
+          const toggle = dropdown.querySelector('a');
+          submenu.style.display = 'none';
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // Modal open/close
+    const modal = document.getElementById('modal');
+    function openModal() {
+      modal.style.display = 'flex';
+      modal.focus();
+    }
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+    window.onkeydown = function(event) {
+      if (event.key === 'Escape' && modal.style.display === 'flex') {
+        closeModal();
+      }
+    };
+
+    // Newsletter form validation and feedback
+    const form = document.getElementById('newsletter-form');
+    const emailInput = document.getElementById('email');
+    const messageBox = document.getElementById('emailHelp');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      messageBox.style.display = 'none';
+      const email = emailInput.value.trim();
+      if (!validateEmail(email)) {
+        messageBox.textContent = 'Please enter a valid email address.';
+        messageBox.className = 'validation-message error';
+        messageBox.style.display = 'block';
+        emailInput.focus();
+        return;
+      }
+      messageBox.textContent = 'Thank you for subscribing!';
+      messageBox.className = 'validation-message success';
+      messageBox.style.display = 'block';
+      form.reset();
+    });
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // ✅ EXPANDED SEARCH with novels and poetry
+    const pages = [
+      {title: 'Home', url: 'index.html', desc: 'Welcome and introduction to Ekau Charles literary works.'},
+      {title: 'Poetry', url: 'poetry.html', desc: 'Collection of poems by Ekau Charles including Target Vol. II poetry.'},
+      {title: 'Novels', url: 'novels.html', desc: 'Explore novels by Ekau Charles: For Her, Target Vol. II, Stolen Hearts.'},
+      {title: 'For Her', url: 'novels.html#for-her', desc: 'Latest novel by Ekau Charles - heartbreaking tale of loss and redemption.'},
+      {title: 'Target Vol. II', url: 'novels.html#target-vol-ii', desc: 'Emotional suspense novel exploring violence, loyalty and love.'},
+      {title: 'Short Stories', url: 'short-stories.html', desc: 'Collection of captivating short stories by Ekau Charles.'},
+      {title: 'Flash Fiction', url: 'flash-fiction.html', desc: 'Bite-sized literary gems by Ekau Charles.'},
+      {title: 'Prose', url: 'prose.html', desc: 'Beautiful prose pieces exploring human emotion by Ekau Charles.'},
+      {title: 'About', url: 'about.html', desc: 'Learn more about Ekau Charles and his writing journey.'},
+      {title: 'Contact', url: 'contact.html', desc: 'Get in touch with Ekau Charles.'}
+    ];
+
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) {
+        searchResults.style.display = 'none';
+        searchResults.innerHTML = '';
+        return;
+      }
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(query) || page.desc.toLowerCase().includes(query)
+      );
+      if (filtered.length === 0) {
+        searchResults.innerHTML = '<div role="option" tabindex="0" style="padding:0.5em 0.75em;">No results found</div>';
+      } else {
+        searchResults.innerHTML = filtered.map(page => 
+          `<a href="${page.url}" role="option" tabindex="0">${page.title} - <small>${page.desc}</small></a>`
+        ).join('');
+      }
+      searchResults.style.display = 'block';
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.style.display = 'none';
+      }
+    });
+
+    searchInput.addEventListener('keydown', e => {
+      const items = Array.from(searchResults.querySelectorAll('a'));
+      if (items.length === 0) return;
+      let index = items.findIndex(item => item === document.activeElement);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (index < items.length - 1) items[index + 1].focus();
+        else items[0].focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (index > 0) items[index - 1].focus();
+        else items[items.length - 1].focus();
+      } else if (e.key === 'Escape') {
+        searchInput.focus();
+        searchResults.style.display = 'none';
+      }
+    });
+
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark" || (!currentTheme && prefersDarkScheme.matches)) {
+      document.body.classList.add("dark-mode");
+      darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      darkModeToggle.setAttribute("aria-label", "Toggle light mode");
+      darkModeToggle.setAttribute("title", "Toggle light mode");
+    }
+    darkModeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      if (document.body.classList.contains("dark-mode")) {
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        darkModeToggle.setAttribute("aria-label", "Toggle light mode");
+        darkModeToggle.setAttribute("title", "Toggle light mode");
+        localStorage.setItem("theme", "dark");
+      } else {
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        darkModeToggle.setAttribute("aria-label", "Toggle dark mode");
+        darkModeToggle.setAttribute("title", "Toggle dark mode");
+        localStorage.setItem("theme", "light");
+      }
+    });
+  </script>
+</body>
+</html>
