@@ -1,0 +1,1168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ekau Charles | Poetry & Novels</title>
+  <meta name="description" content="Explore the poetry and novels of Ekau Charles, a passionate author weaving stories and verses that delve into human emotion and imagination." />
+  <meta name="author" content="Ekau Charles, Poet & Novelist" />
+  <meta property="og:title" content="Ekau Charles | Poetry & Novels" />
+  <meta property="og:description" content="Explore the poetry and novels of Ekau Charles, a passionate author weaving stories and verses that delve into human emotion and imagination." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ekaucharles.github.io/" />
+  <meta property="og:image" content="https://ekaucharles.github.io/img/open_vintage_book_2.webp" />
+  <link rel="preload" href="img/open_vintage_book_2.webp" as="image" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Libre+Baskerville&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    /* [ALL YOUR EXISTING CSS REMAINS IDENTICAL - NO CHANGES NEEDED HERE] */
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Libre Baskerville', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFFFF0;
+      color: #333333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+      color: #0A1828;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      transition: color 0.3s;
+    }
+    a {
+      color: #0A1828;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover, a:focus {
+      color: #957C3D;
+      outline: none;
+    }
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #957C3D;
+      color: #FFFFF0;
+      padding: 8px 16px;
+      z-index: 100;
+      transition: top 0.3s;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    header {
+      background-color: #BFA181;
+      padding: 1em 2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      flex: 1;
+      min-width: 0;
+    }
+    .logo { 
+      height: 100px; 
+      flex-shrink: 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      align-items: center;
+    }
+    nav a {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5em 0.75em;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    nav a:hover, nav a:focus {
+      background-color: #957C3D;
+      color: #FFFFF0;
+    }
+    nav a[aria-current="page"] {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      cursor: default;
+    }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #0A1828;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .nav-toggle:hover, .nav-toggle:focus {
+      color: #957C3D;
+      outline: none;
+    }
+    #nav-menu.open {
+      display: flex !important;
+      flex-direction: column;
+      width: 100%;
+      background-color: #BFA181;
+      padding: 1em 0;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .search-container {
+      position: relative;
+      margin-left: 1em;
+      max-width: 250px;
+      width: 100%;
+    }
+    .search-input-wrapper {
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 0.4em 2.5em 0.4em 0.75em;
+      font-size: 1rem;
+      border: 2px solid #957C3D;
+      border-radius: 4px;
+      font-family: 'Libre Baskerville', serif;
+    }
+    .search-icon {
+      position: absolute;
+      right: 0.75em;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #957C3D;
+      pointer-events: none;
+      font-size: 1.1rem;
+    }
+    .search-results {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      right: 0;
+      background: #FFF9E6;
+      border: 1px solid #957C3D;
+      border-radius: 0 0 4px 4px;
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 200;
+      display: none;
+      font-family: 'Libre Baskerville', serif;
+    }
+    .search-results a {
+      display: block;
+      padding: 0.5em 0.75em;
+      color: #0A1828;
+      border-bottom: 1px solid #BFA181;
+    }
+    .search-results a:last-child {
+      border-bottom: none;
+    }
+    .search-results a:hover, .search-results a:focus {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      outline: none;
+    }
+    #dark-mode-toggle {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #0A1828;
+      transition: color 0.3s;
+      margin-left: 1em;
+    }
+    #dark-mode-toggle:hover, #dark-mode-toggle:focus {
+      color: #957C3D;
+      outline: none;
+    }
+
+    /* ✅ MOBILE: Logo + Site Intro on SAME LINE */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: row !important;
+        align-items: center !important;
+        padding: 0.5em 1em !important;
+      }
+      
+      .logo-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5em !important;
+        flex: 1 !important;
+        min-width: 0;
+      }
+      
+      .logo {
+        height: 50px !important;
+        flex-shrink: 0;
+      }
+      
+      .site-intro {
+        margin-left: 0 !important;               /* Remove left margin */
+        margin-right: auto;                      /* Push nav to right */
+        flex: 1;                                 /* Take available space */
+        min-width: 0;                            /* Allow text shrink */
+      }
+      
+      .site-intro-name {
+        font-size: 2.25rem !important;           /* Smaller name */
+        line-height: 1 !important;
+        white-space: nowrap !important;          /* Prevent line break */
+      }
+      
+      .site-intro-top {
+        font-size: 0.85rem !important;           /* Smaller subtitle */
+        white-space: nowrap !important;
+      }
+      
+      .nav-toggle {
+        display: block;
+        order: 3 !important;
+        margin-left: auto !important;
+      }
+      
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        order: 2;
+      }
+      
+      .search-container {
+        order: 4 !important;
+        width: 100% !important;
+        margin-top: 0.5em !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+      }
+      
+      nav#nav-menu.open {
+        display: flex !important;
+      }
+    }
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: auto !important;           /* Remove fixed height */
+      min-height: 50vh !important;       /* Flexible minimum */
+      max-height: 80vh !important;       /* Prevent too tall */
+      background: url('img/open_vintage_book_2.webp') center center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0A1828;
+      font-family: 'Libre Baskerville', serif;
+      text-align: center;
+      padding: 2em 1em !important;       /* More breathing room */
+      border-radius: 0.5em;
+      overflow: hidden;      /* Show all text */
+      margin-bottom: 3em;
+      transition: background-color 0.3s;
+    }
+    .hero .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 240, 0.7);
+      pointer-events: none;
+      transition: background-color 0.3s;
+    }
+    .hero-text {
+      position: relative;
+      width: 100% !important;            /* Full width available */
+      max-width: 800px;
+      z-index: 2;                        /* Above overlay */
+      padding: 1em;                      /* Internal spacing */
+    }
+    .hero-text h1 {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 5vw, 3rem) !important;  /* Responsive font */
+      margin-bottom: 0.75em !important;
+      line-height: 1.2 !important;       /* Better line height */
+      hyphens: auto;                     /* Word breaking */
+      overflow-wrap: break-word;
+      color: #0A1828;
+      transition: color 0.3s;
+    }
+    .hero-text p {
+      font-size: clamp(1rem, 3vw, 1.3rem) !important;
+      line-height: 1.6 !important;
+      color: #0A1828;
+      max-width: 100% !important;        /* No width restriction */
+      margin: 0 auto 1.5em auto !important;
+      padding: 0 1em;                    /* Side padding */
+      hyphens: auto;
+      transition: color 0.3s;
+    }
+    .hero-cta {
+      margin-top: 1.5em;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #957C3D;
+      color: #FFFFF0;
+      padding: 0.75em 1.5em;
+      border-radius: 4px;
+      font-weight: 700;
+      font-family: 'League Spartan', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background-color 0.3s, color 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn:hover, .btn:focus {
+      background-color: #BFA181;
+      color: #0A1828;
+      outline: none;
+    }
+    /* Mobile specific hero fixes */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 60vh !important;
+        padding: 3em 1em !important;
+      }
+      .hero-text h1 {
+        font-size: clamp(1.75rem, 8vw, 2.5rem) !important;
+        margin-bottom: 1em !important;
+      }
+      .hero-text p {
+        font-size: clamp(1rem, 4vw, 1.2rem) !important;
+        padding: 0 0.5em !important;
+      }
+      .hero-cta {
+        margin-top: 1em !important;
+      }
+      .btn {
+        padding: 0.75em 1.5em !important;
+        font-size: 1rem !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero {
+        padding: 2em 0.75em !important;
+      }
+      .hero-text {
+        padding: 0.5em !important;
+      }
+    }
+    .tagline {
+      text-align: center;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 1.25rem;
+      color: #957C3D;
+      margin-top: -1.5em;
+      margin-bottom: 3em;
+      letter-spacing: 1.2px;
+      transition: color 0.3s;
+    }
+    .featured-book {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      align-items: center;
+      margin-bottom: 3em;
+      background: #FFF9E6;
+      border-radius: 0.5em;
+      padding: 1.5em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .featured-book img {
+      max-width: 250px;
+      width: 100%;
+      border-radius: 0.5em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .featured-book img:hover, .featured-book img:focus {
+      transform: scale(1.05);
+      outline: 2px solid #957C3D;
+    }
+    .book-details {
+      flex: 1;
+      font-family: 'Libre Baskerville', serif;
+    }
+    .book-details h2 {
+      margin-top: 0;
+      color: #0A1828;
+      font-size: 2rem;
+      transition: color 0.3s;
+    }
+    .book-details p {
+      font-size: 1.1rem;
+      margin: 1em 0;
+      color: #333333;
+      transition: color 0.3s;
+    }
+    .about-preview {
+      background: #FFF9E6;
+      padding: 2em;
+      border-radius: 0.5em;
+      margin-bottom: 3em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 2em;
+      align-items: center;
+      flex-wrap: wrap;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .about-photo {
+      flex: 0 0 180px;
+      width: 180px;
+      height: 240px;
+      border-radius: 50% / 60%;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .about-caption {
+      font-size: 0.95rem;
+      color: #957C3D;
+      text-align: center;
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+      width: 100%;
+      order: 2;
+    }
+    .about-text {
+      flex: 1;
+      font-family: 'Libre Baskerville', serif;
+      color: #333333;
+      transition: color 0.3s;
+      min-width: 220px;
+    }
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    @media (max-width: 768px) {
+      .featured-book,
+      .about-preview {
+        flex-direction: column;
+        text-align: center;
+      }
+      .book-details,
+      .about-text {
+        max-width: 100%;
+      }
+      .about-photo {
+        width: 120px;
+        height: 160px;
+      }
+      .about-caption {
+        margin-bottom: 0.5em;
+      }
+      .about-photo {
+        margin-bottom: 0;
+      }
+    }
+    .newsletter {
+      background: #FFF9E6;
+      padding: 2em;
+      border-radius: 0.5em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      margin-bottom: 3em;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .newsletter h2 {
+      margin-bottom: 0.25em !important;
+      font-family: 'League Spartan', sans-serif;
+      color: #0A1828;
+      transition: color 0.3s;
+      font-size: 2.25rem !important;  /* 36px - prominent but elegant */
+      
+    }
+    /* Newsletter section - perfect homepage match */
+    #newsletter .formkit-form {
+      max-width: 420px !important;
+      padding: 40px 30px !important;
+      gap: 1.2em !important;
+    }
+
+    /* Remove Kit branding */
+    .formkit-powered-by-convertkit {
+      display: none !important;
+    }
+    .form-wrapper {
+      display: grid !important;
+      place-items: center !important;  /* Perfect center alignment */
+      gap: 1em !important;
+      min-height: 120px;              /* Give space for stacking */
+    }
+    .privacy-notice {
+      font-size: 0.85rem !important;
+      color: #666 !important;
+      margin: 0 !important;
+      padding: 0.5em 0 !important;
+      width: 100% !important;
+      text-align: center !important;
+      grid-row: 2 !important;  /* Forces it to second row */
+    }
+
+    
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .ck_subscriber_form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .ck_subscriber_form input[type="email"] {
+        width: 100% !important;
+      }
+    }
+    .testimonials {
+      margin-bottom: 3em;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .testimonials h2 {
+      text-align: center;
+      font-family: 'League Spartan', sans-serif;
+      color: #0A1828;
+      margin-bottom: 1em;
+      transition: color 0.3s;
+    }
+    .testimonial-item {
+      background: #FFF9E6;
+      border-radius: 0.5em;
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-style: italic;
+      color: #333333;
+      font-family: 'Libre Baskerville', serif;
+      transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    }
+    .testimonial-author {
+      margin-top: 1em;
+      font-weight: 700;
+      text-align: right;
+      color: #0A1828;
+      font-family: 'League Spartan', sans-serif;
+      transition: color 0.3s;
+    }
+    .footer {
+      background: #BFA181;
+      color: #0A1828;
+      text-align: center;
+      padding: 1.2em 0;
+      transition: background 0.4s, color 0.4s;
+    }
+    .footer a {
+      color: inherit;
+      text-decoration: underline;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 600;
+      font-size: 1em;
+      transition: color 0.2s;
+    }
+    .footer a:hover { color: #957C3D; }
+    .footer .social-icons { margin-top: 1em; }
+    .footer .social-icons a {
+      color: #0A1828;
+      margin: 0 0.18em;
+      font-size: 1.15em;
+      text-decoration: none;
+      transition: color 0.2s;
+      vertical-align: middle;
+    }
+    .footer .social-icons a:hover { color: #957C3D; }
+    .footer p { margin: 1em 0 0 0; }
+    @media (max-width: 600px) {
+      .footer { padding: 1em 0; }
+      .logo { height: 58px; }
+      .site-title { font-size: 1.3rem; }
+      .footer .social-icons { font-size: 1em; }
+    }
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #E0E0E0;
+    }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+      color: #FFD966;
+    }
+    body.dark-mode a {
+      color: #FFD966;
+    }
+    body.dark-mode a:hover, body.dark-mode a:focus {
+      color: #FFC107;
+    }
+    body.dark-mode header {
+      background-color: #333333;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    }
+    body.dark-mode .footer {
+      background-color: #333333;
+      color: #FFD966;
+    }
+    body.dark-mode nav a {
+      color: #FFD966;
+    }
+    body.dark-mode nav a:hover, body.dark-mode nav a:focus {
+      background-color: #FFC107;
+      color: #121212;
+    }
+    body.dark-mode .search-input {
+      background-color: #333333;
+      color: #E0E0E0;
+      border-color: #FFD966;
+    }
+    body.dark-mode .search-results {
+      background: #222222;
+      border-color: #FFD966;
+      color: #E0E0E0;
+    }
+    body.dark-mode .search-results a {
+      color: #FFD966;
+      border-bottom: 1px solid #BFA181;
+    }
+    body.dark-mode .search-results a:hover, .search-results a:focus {
+      background-color: #FFC107;
+      color: #121212;
+    }
+    body.dark-mode .hero .overlay {
+      background: rgba(18, 18, 18, 0.7);
+    }
+    body.dark-mode .hero-text p,
+    body.dark-mode .hero-text h1 {
+      color: #FFD966;
+    }
+    body.dark-mode .tagline {
+      color: #FFC107;
+    }
+    body.dark-mode .featured-book,
+    body.dark-mode .about-preview,
+    body.dark-mode .newsletter,
+    body.dark-mode .testimonial-item {
+      background: #222222;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+      color: #E0E0E0;
+    }
+    body.dark-mode .book-details p,
+    body.dark-mode .about-text p {
+        color: #F5F5F5
+    }
+    body.dark-mode .btn {
+      background-color: #FFD966;
+      color: #121212;
+    }
+    body.dark-mode .btn:hover, body.dark-mode .btn:focus {
+      background-color: #FFC107;
+      color: #121212;
+    }
+    body.dark-mode input[type="email"] {
+      background-color: #333333;
+      color: #E0E0E0;
+      border-color: #FFD966;
+    }
+    body.dark-mode input[type="email"]::placeholder {
+      color: #ccc;
+    }
+    body.dark-mode .validation-message.error {
+      color: #ff6b6b;
+    }
+    body.dark-mode .validation-message.success {
+      color: #90ee90;
+    }
+    body.dark-mode .social-icons a {
+      color: #FFD966;
+    }
+    body.dark-mode .social-icons a:hover {
+      color: #FFC107;
+    }
+    .site-intro {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1.5em;
+      justify-content: center;
+    }
+    .site-intro-top {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.3rem;
+      color: #957C3D;
+      letter-spacing: 1px;
+      margin-bottom: -0.3em;
+    }
+    .site-intro-name {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: #0A1828;
+      font-weight: normal;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .dropdown > a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25em;
+      text-decoration: underline;
+      color: #0A1828;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #BFA181;
+      min-width: 160px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      padding: 0.5em 0;
+      z-index: 1000;
+      margin-top: 0.5em;
+      list-style: none;
+    }
+    
+    .dropdown-menu li a {
+      display: block;
+      padding: 0.5em 1em;
+      color: #0A1828;
+      text-decoration: none;
+      font-weight: 600;
+      font-family: 'League Spartan', sans-serif;
+    }
+    
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a:focus {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      outline: none;
+    }
+
+    /* UNDERLINE ALL NAVIGATION LINKS */
+    nav a,
+    .dropdown > a,
+    .dropdown-menu li a {
+      text-decoration: underline;
+    }
+    
+    /* REMOVE UNDERLINE ON HOVER (keeps visual feedback) */
+    nav a:hover, nav a:focus,
+    .dropdown > a:hover, .dropdown > a:focus,
+    .dropdown-menu li a:hover, .dropdown-menu li a:focus {
+      text-decoration: none;
+    }
+
+    /* Show dropdown on hover and focus */
+    .dropdown:hover > .dropdown-menu,
+    .dropdown:focus-within > .dropdown-menu {
+      display: block;
+    }
+    
+    /* Caret icon style */
+    .dropdown > a i {
+      font-size: 0.8rem;
+    }
+
+    nav a {
+      text-decoration: underline;  /* ALL nav links underlined */
+    }
+
+    /* Mobile Money Buttons */
+    .mobile-money {
+      margin-top: 1em;
+      display: flex;
+      gap: 0.5em;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .mobile-money a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.5em 1em;
+      background: #28a745;
+      color: white;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .mobile-money a:hover {
+      background: #218838;
+      color: white;
+    }
+    body.dark-mode .mobile-money a {
+      background: #FFD966;
+      color: #121212;
+    }
+    body.dark-mode .mobile-money a:hover {
+      background: #FFC107;
+      color: #121212;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <header>     
+    <img src="img/open_trademark.webp" alt="Ekau Logo" class="logo" loading="lazy" />
+    <div class="site-intro">
+      <span class="site-intro-top">Official Website of</span>
+      <span class="site-intro-name">Ekau Charles</span>
+    </div>
+    <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
+    <nav id="nav-menu" role="navigation" aria-label="Primary navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <div class="dropdown" tabindex="0">
+        <a href="#" id="works-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="works-submenu" onclick="toggleWorksDropdown(event)">
+          Works <i class="fas fa-caret-down"></i>
+        </a>
+        <ul id="works-submenu" class="dropdown-menu" role="menu" aria-label="Submenu for Works">
+          <li role="none"><a role="menuitem" href="poetry.html">Poetry</a></li>
+          <li role="none"><a role="menuitem" href="novels.html">Novels</a></li>
+          <li role="none"><a role="menuitem" href="short-stories.html">Short Stories</a></li>
+          <li role="none"><a role="menuitem" href="flash-fiction.html">Flash Fiction</a></li>
+          <li role="none"><a role="menuitem" href="prose.html">Prose</a></li>
+        </ul>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="search-container" role="search">
+      <div class="search-input-wrapper">
+        <input type="search" id="search-input" class="search-input" placeholder="Search site…" aria-label="Search site" autocomplete="off" />
+        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+      </div>
+      <div id="search-results" class="search-results" role="listbox" aria-live="polite"></div>
+    </div>
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero" role="banner" aria-label="Introduction">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1>Welcome to the Literary World of Ekau Charles</h1>
+        <p>Here, poetry and prose intertwine to explore the depths of human emotion, imagination, and storytelling. Dive into collections of heartfelt poems and captivating novels crafted to inspire and move you.</p>
+        <div class="hero-cta">
+          <a href="#featured-book-title" 
+             class="btn" 
+             onclick="dualPurposeCTA(event)"
+             aria-label="Read Target Vol. II - Latest Novel">Read Latest Book</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="tagline" aria-label="Author tagline">
+      Ekau Charles — Poet & Novelist — Exploring the Depths of Human Emotion
+    </p>
+    
+    <section class="featured-book" aria-labelledby="featured-book-title">
+            <img src="covers/A_Seasoned_Professional.webp" alt="Cover of latest book A Seasoned Professional: Wrath of Angry Angel by Ekau Charles" loading="lazy" tabindex="0" role="button" aria-describedby="modal-desc" aria-haspopup="dialog" onclick="openModal()" onkeypress="if(event.key==='Enter') openModal()">
+            
+            <div class="book-details">
+                <h2 id="featured-book-title">Latest Release: "A Seasoned Professional"</h2>
+                <p>**A Seasoned Professional: Wrath of Angry Angel** follows the tumultuous journey of James W. Turner, a decorated detective wrongfully accused of murdering his wife, Marie Hoskins Turner, a respected state researcher. As he grapples with his innocence, a shocking betrayal leads him to a life-or-death escape from prison while his partner, Pearl Sawyer, risks it all to uncover the truth. As secrets unravel and deadly forces close in, both James and Pearl must navigate a web of lies, deceit, and hidden agendas to protect their loved ones and expose the real killer. With time running out and their lives at stake, can they reclaim their futures, or will past mistakes come back to haunt them? In a gripping tale of justice and redemption, loyalties are tested, and the line between right and wrong blurs in a world where everyone has something to lose.</p>
+                <a href="novels.html#a-seasoned-professional" class="btn" aria-label="Read more about A Seasoned Professional">Read More</a>
+            </div>
+        </section>
+        
+        <!-- Modal for book preview -->
+        <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" tabindex="-1" 
+             style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10,24,40,0.8); justify-content: center; align-items: center; z-index: 1000;">
+            <div style="background: #FFFFF0; color: #0A1828; max-width: 600px; padding: 2em; border-radius: 8px; position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                <button aria-label="Close preview" onclick="closeModal()" style="position: absolute; top: 1em; right: 1em; background: none; border: none; font-size: 1.5rem; color: #957C3D; cursor: pointer;">&times;</button>
+                <h3 id="modal-title" style="margin-top: 0;">Excerpt from A Seasoned Professional</h3>
+                <div id="modal-desc" style="font-family: 'Libre Baskerville', serif; line-height: 1.6;">
+                    <p>James stood still and silent listening, then all of a sudden he shouted.</p>
+                    <p>“Get down!”</p>
+                    <p>Pearl dropped to the floor with her daughter in her arms and James dived to the floor too as bullets riddled through the whole house. The men opened up with sharp, precise three-round bursts, their fire guided by the infrared dots visible through their monocular. The Spray of bullets tore through the line of front windows, spewing glass shards everywhere. The men were getting closer.</p>
+                    <p>Bullets gouged the walls and tore through the door, sending splinters flying. One of the men came and kicked down the door. Some men were now reloading after their guns had emptied out. James and Pearl stood from the debris and decided to pick out one man at a go. But there were too many and well-armed and they attacked from every side of the house. As James and Pearl fought off the men who had penetrated through, one of the perpetrators came at them through the front door. He froze for a bit then his firearm went off.</p>
+                </div>
+                <a href="novels.html#a-seasoned-professional" class="btn" style="margin-top: 1em;">Read Full Chapter</a>
+            </div>
+        </div>
+    <section class="about-preview" aria-labelledby="about-preview-title">
+      <div>
+        <div class="about-photo">
+          <img src="img/IMG_20190905_1207181.webp" alt="Portrait of Ekau Charles" loading="lazy" />
+        </div>
+        <figcaption class="about-caption">Ekau Charles, author and poet</figcaption>
+      </div>
+      <div class="about-text">
+        <h2 id="about-preview-title">About Ekau Charles</h2>
+        <p>
+          Ekau Charles is a passionate poet and novelist whose work delves into the intricacies of human emotion and imagination. With a unique voice and lyrical style, Ekau invites readers to experience stories that resonate deeply and inspire reflection.
+        </p>
+        <a href="about.html" class="btn" aria-label="Learn more about Ekau Charles">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Newsletter Section - ConvertKit form will go here -->
+        <section class="newsletter" aria-labelledby="newsletter-title">
+          <h2 id="newsletter-title">Subscribe to My Newsletter</h2>
+          <p class="newsletter-subtitle">Get exclusive poems, novel excerpts, and updates delivered straight to your inbox.</p>
+            <div class="form-wrapper">
+            <form action="https://app.kit.com/forms/9006581/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9006581" data-uid="5b146bf298" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(149, 124, 61); border-radius: 8px; font-weight: 400;"></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 240); background-color: rgb(149, 124, 61); border-radius: 8px; font-weight: 400;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Subscribe</span></button></div><div class="formkit-powered-by-convertkit-container"><a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a></div></div><style>.formkit-form[data-uid="5b146bf298"] *{box-sizing:border-box;}.formkit-form[data-uid="5b146bf298"]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.formkit-form[data-uid="5b146bf298"] legend{border:none;font-size:inherit;margin-bottom:10px;padding:0;position:relative;display:table;}.formkit-form[data-uid="5b146bf298"] fieldset{border:0;padding:0.01em 0 0 0;margin:0;min-width:0;}.formkit-form[data-uid="5b146bf298"] body:not(:-moz-handler-blocked) fieldset{display:table-cell;}.formkit-form[data-uid="5b146bf298"] h1,.formkit-form[data-uid="5b146bf298"] h2,.formkit-form[data-uid="5b146bf298"] h3,.formkit-form[data-uid="5b146bf298"] h4,.formkit-form[data-uid="5b146bf298"] h5,.formkit-form[data-uid="5b146bf298"] h6{color:inherit;font-size:inherit;font-weight:inherit;}.formkit-form[data-uid="5b146bf298"] h2{font-size:1.5em;margin:1em 0;}.formkit-form[data-uid="5b146bf298"] h3{font-size:1.17em;margin:1em 0;}.formkit-form[data-uid="5b146bf298"] p{color:inherit;font-size:inherit;font-weight:inherit;}.formkit-form[data-uid="5b146bf298"] ol:not([template-default]),.formkit-form[data-uid="5b146bf298"] ul:not([template-default]),.formkit-form[data-uid="5b146bf298"] blockquote:not([template-default]){text-align:left;}.formkit-form[data-uid="5b146bf298"] p:not([template-default]),.formkit-form[data-uid="5b146bf298"] hr:not([template-default]),.formkit-form[data-uid="5b146bf298"] blockquote:not([template-default]),.formkit-form[data-uid="5b146bf298"] ol:not([template-default]),.formkit-form[data-uid="5b146bf298"] ul:not([template-default]){color:inherit;font-style:initial;}.formkit-form[data-uid="5b146bf298"] .ordered-list,.formkit-form[data-uid="5b146bf298"] .unordered-list{list-style-position:outside !important;padding-left:1em;}.formkit-form[data-uid="5b146bf298"] .list-item{padding-left:0;}.formkit-form[data-uid="5b146bf298"][data-format="modal"]{display:none;}.formkit-form[data-uid="5b146bf298"][data-format="slide in"]{display:none;}.formkit-form[data-uid="5b146bf298"][data-format="sticky bar"]{display:none;}.formkit-sticky-bar .formkit-form[data-uid="5b146bf298"][data-format="sticky bar"]{display:block;}.formkit-form[data-uid="5b146bf298"] .formkit-input,.formkit-form[data-uid="5b146bf298"] .formkit-select,.formkit-form[data-uid="5b146bf298"] .formkit-checkboxes{width:100%;}.formkit-form[data-uid="5b146bf298"] .formkit-button,.formkit-form[data-uid="5b146bf298"] .formkit-submit{border:0;border-radius:5px;color:#ffffff;cursor:pointer;display:inline-block;text-align:center;font-size:15px;font-weight:500;cursor:pointer;margin-bottom:15px;overflow:hidden;padding:0;position:relative;vertical-align:middle;}.formkit-form[data-uid="5b146bf298"] .formkit-button:hover,.formkit-form[data-uid="5b146bf298"] .formkit-submit:hover,.formkit-form[data-uid="5b146bf298"] .formkit-button:focus,.formkit-form[data-uid="5b146bf298"] .formkit-submit:focus{outline:none;}.formkit-form[data-uid="5b146bf298"] .formkit-button:hover > span,.formkit-form[data-uid="5b146bf298"] .formkit-submit:hover > span,.formkit-form[data-uid="5b146bf298"] .formkit-button:focus > span,.formkit-form[data-uid="5b146bf298"] .formkit-submit:focus > span{background-color:rgba(0,0,0,0.1);}.formkit-form[data-uid="5b146bf298"] .formkit-button > span,.formkit-form[data-uid="5b146bf298"] .formkit-submit > span{display:block;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;padding:12px 24px;}.formkit-form[data-uid="5b146bf298"] .formkit-input{background:#ffffff;font-size:15px;padding:12px;border:1px solid #e3e3e3;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;line-height:1.4;margin:0;-webkit-transition:border-color ease-out 300ms;transition:border-color ease-out 300ms;}.formkit-form[data-uid="5b146bf298"] .formkit-input:focus{outline:none;border-color:#1677be;-webkit-transition:border-color ease 300ms;transition:border-color ease 300ms;}.formkit-form[data-uid="5b146bf298"] .formkit-input::-webkit-input-placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="5b146bf298"] .formkit-input::-moz-placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="5b146bf298"] .formkit-input:-ms-input-placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="5b146bf298"] .formkit-input::placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="5b146bf298"] [data-group="dropdown"]{position:relative;display:inline-block;width:100%;}.formkit-form[data-uid="5b146bf298"] [data-group="dropdown"]::before{content:"";top:calc(50% - 2.5px);right:10px;position:absolute;pointer-events:none;border-color:#4f4f4f transparent transparent transparent;border-style:solid;border-width:6px 6px 0 6px;height:0;width:0;z-index:999;}.formkit-form[data-uid="5b146bf298"] [data-group="dropdown"] select{height:auto;width:100%;cursor:pointer;color:#333333;line-height:1.4;margin-bottom:0;padding:0 6px;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:15px;padding:12px;padding-right:25px;border:1px solid #e3e3e3;background:#ffffff;}.formkit-form[data-uid="5b146bf298"] [data-group="dropdown"] select:focus{outline:none;}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"]{text-align:left;margin:0;}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"]{margin-bottom:10px;}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"] *{cursor:pointer;}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"]:last-of-type{margin-bottom:0;}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]{display:none;}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"] + label::after{content:none;}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]:checked + label::after{border-color:#ffffff;content:"";}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]:checked + label::before{background:#10bf7a;border-color:#10bf7a;}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"] label{position:relative;display:inline-block;padding-left:28px;}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"] label::before,.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"] label::after{position:absolute;content:"";display:inline-block;}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"] label::before{height:16px;width:16px;border:1px solid #e3e3e3;background:#ffffff;left:0px;top:3px;}.formkit-form[data-uid="5b146bf298"] [data-group="checkboxes"] [data-group="checkbox"] label::after{height:4px;width:8px;border-left:2px solid #4d4d4d;border-bottom:2px solid #4d4d4d;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);left:4px;top:8px;}.formkit-form[data-uid="5b146bf298"] .formkit-alert{background:#f9fafb;border:1px solid #e3e3e3;border-radius:5px;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;list-style:none;margin:25px auto;padding:12px;text-align:center;width:100%;}.formkit-form[data-uid="5b146bf298"] .formkit-alert:empty{display:none;}.formkit-form[data-uid="5b146bf298"] .formkit-alert-success{background:#d3fbeb;border-color:#10bf7a;color:#0c905c;}.formkit-form[data-uid="5b146bf298"] .formkit-alert-error{background:#fde8e2;border-color:#f2643b;color:#ea4110;}.formkit-form[data-uid="5b146bf298"] .formkit-spinner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:0px;width:0px;margin:0 auto;position:absolute;top:0;left:0;right:0;width:0px;overflow:hidden;text-align:center;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;}.formkit-form[data-uid="5b146bf298"] .formkit-spinner > div{margin:auto;width:12px;height:12px;background-color:#fff;opacity:0.3;border-radius:100%;display:inline-block;-webkit-animation:formkit-bouncedelay-formkit-form-data-uid-5b146bf298- 1.4s infinite ease-in-out both;animation:formkit-bouncedelay-formkit-form-data-uid-5b146bf298- 1.4s infinite ease-in-out both;}.formkit-form[data-uid="5b146bf298"] .formkit-spinner > div:nth-child(1){-webkit-animation-delay:-0.32s;animation-delay:-0.32s;}.formkit-form[data-uid="5b146bf298"] .formkit-spinner > div:nth-child(2){-webkit-animation-delay:-0.16s;animation-delay:-0.16s;}.formkit-form[data-uid="5b146bf298"] .formkit-submit[data-active] .formkit-spinner{opacity:1;height:100%;width:50px;}.formkit-form[data-uid="5b146bf298"] .formkit-submit[data-active] .formkit-spinner ~ span{opacity:0;}.formkit-form[data-uid="5b146bf298"] .formkit-powered-by[data-active="false"]{opacity:0.35;}.formkit-form[data-uid="5b146bf298"] .formkit-powered-by-convertkit-container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;margin:10px 0;position:relative;}.formkit-form[data-uid="5b146bf298"] .formkit-powered-by-convertkit-container[data-active="false"]{opacity:0.35;}.formkit-form[data-uid="5b146bf298"] .formkit-powered-by-convertkit{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#ffffff;border-radius:9px;color:#3d3d3d;cursor:pointer;display:block;height:36px;margin:0 auto;opacity:0.95;padding:0;-webkit-text-decoration:none;text-decoration:none;text-indent:100%;-webkit-transition:ease-in-out all 200ms;transition:ease-in-out all 200ms;white-space:nowrap;overflow:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:157px;background-repeat:no-repeat;background-position:center;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg width='133' height='36' viewBox='0 0 133 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.861 25.5C0.735 25.5 0.651 25.416 0.651 25.29V10.548C0.651 10.422 0.735 10.338 0.861 10.338H6.279C9.072 10.338 10.668 11.451 10.668 13.824C10.668 15.819 9.219 16.932 8.001 17.226C7.707 17.268 7.707 17.625 8.022 17.688C9.912 18.108 11.088 19.116 11.088 21.321C11.088 23.715 9.429 25.5 6.426 25.5H0.861ZM5.397 23.085C6.825 23.085 7.518 22.224 7.518 21.006C7.518 19.683 6.825 18.948 5.397 18.948H4.2V23.085H5.397ZM5.313 16.617C6.51 16.617 7.245 15.945 7.245 14.601C7.245 13.383 6.51 12.753 5.25 12.753H4.2V16.617H5.313ZM17.9758 23.883C17.9758 23.568 17.6608 23.505 17.5348 23.799C17.0308 24.954 16.1698 25.731 14.5528 25.731C12.8728 25.731 12.0958 24.471 12.0958 22.707V14.937C12.0958 14.811 12.1798 14.727 12.3058 14.727H15.2248C15.3508 14.727 15.4348 14.811 15.4348 14.937V21.657C15.4348 22.581 15.7708 23.022 16.4638 23.022C17.1778 23.022 17.6188 22.581 17.6188 21.657V14.937C17.6188 14.811 17.7028 14.727 17.8288 14.727H20.7478C20.8738 14.727 20.9578 14.811 20.9578 14.937V25.29C20.9578 25.416 20.8738 25.5 20.7478 25.5H18.1858C18.0598 25.5 17.9758 25.416 17.9758 25.29V23.883ZM25.6141 25.29C25.6141 25.416 25.5301 25.5 25.4041 25.5H22.4851C22.3591 25.5 22.2751 25.416 22.2751 25.29V14.937C22.2751 14.811 22.3591 14.727 22.4851 14.727H25.4041C25.5301 14.727 25.6141 14.811 25.6141 14.937V25.29ZM23.9131 13.74C22.8001 13.74 22.0441 12.942 22.0441 11.934C22.0441 10.926 22.8001 10.107 23.9131 10.107C25.0051 10.107 25.7611 10.926 25.7611 11.934C25.7611 12.942 25.0051 13.74 23.9131 13.74ZM26.7883 10.548C26.7883 10.422 26.8723 10.338 26.9983 10.338H29.9173C30.0433 10.338 30.1273 10.422 30.1273 10.548V22.056C30.1273 22.749 30.2533 23.085 30.8203 23.085C31.0093 23.085 31.1983 23.043 31.3663 23.001C31.5133 22.959 31.6183 22.959 31.6183 23.127V25.059C31.6183 25.164 31.5763 25.269 31.4923 25.311C30.9673 25.521 30.2953 25.71 29.5813 25.71C27.7123 25.71 26.7883 24.639 26.7883 22.476V10.548ZM32.4237 14.727C32.8227 14.727 32.9277 14.538 32.9697 14.055L33.1167 12.039C33.1167 11.913 33.2217 11.829 33.3477 11.829H35.8887C36.0147 11.829 36.0987 11.913 36.0987 12.039V14.517C36.0987 14.643 36.1827 14.727 36.3087 14.727H38.2827C38.4087 14.727 38.4927 14.811 38.4927 14.937V16.659C38.4927 16.785 38.4087 16.869 38.2827 16.869H36.0777V22.056C36.0777 22.875 36.5397 23.085 37.0647 23.085C37.4847 23.085 37.9467 22.938 38.3247 22.707C38.4717 22.623 38.5767 22.665 38.5767 22.833V24.828C38.5767 24.933 38.5347 25.017 38.4507 25.08C37.8417 25.458 36.9807 25.71 36.0357 25.71C34.2927 25.71 32.7387 24.912 32.7387 22.476V16.869H31.8567C31.7307 16.869 31.6467 16.785 31.6467 16.659V14.937C31.6467 14.811 31.7307 14.727 31.8567 14.727H32.4237ZM51.3808 14.727C51.5068 14.727 51.5908 14.79 51.6118 14.916L52.3888 19.851L52.5778 21.174C52.6198 21.468 52.9558 21.468 52.9768 21.174C53.0398 20.712 53.0818 20.271 53.1658 19.83L53.8798 14.916C53.9008 14.79 53.9848 14.727 54.1108 14.727H56.6728C56.8198 14.727 56.8828 14.811 56.8618 14.958L54.6778 25.311C54.6568 25.437 54.5728 25.5 54.4468 25.5H51.3178C51.1918 25.5 51.1078 25.437 51.0868 25.311L50.1208 20.082L49.8898 18.633C49.8688 18.444 49.6588 18.444 49.6378 18.633L49.4068 20.103L48.5458 25.311C48.5248 25.437 48.4408 25.5 48.3148 25.5H45.2068C45.0808 25.5 44.9968 25.437 44.9758 25.311L42.8128 14.958C42.7918 14.811 42.8548 14.727 43.0018 14.727H45.9628C46.0888 14.727 46.1728 14.79 46.1938 14.916L46.9288 19.83C47.0128 20.271 47.0758 20.754 47.1388 21.195C47.2018 21.51 47.4748 21.531 47.5378 21.195L47.7478 19.872L48.6088 14.916C48.6298 14.79 48.7138 14.727 48.8398 14.727H51.3808ZM61.1582 25.29C61.1582 25.416 61.0742 25.5 60.9482 25.5H58.0292C57.9032 25.5 57.8192 25.416 57.8192 25.29V14.937C57.8192 14.811 57.9032 14.727 58.0292 14.727H60.9482C61.0742 14.727 61.1582 14.811 61.1582 14.937V25.29ZM59.4572 13.74C58.3442 13.74 57.5882 12.942 57.5882 11.934C57.5882 10.926 58.3442 10.107 59.4572 10.107C60.5492 10.107 61.3052 10.926 61.3052 11.934C61.3052 12.942 60.5492 13.74 59.4572 13.74ZM62.8154 14.727C63.2144 14.727 63.3194 14.538 63.3614 14.055L63.5084 12.039C63.5084 11.913 63.6134 11.829 63.7394 11.829H66.2804C66.4064 11.829 66.4904 11.913 66.4904 12.039V14.517C66.4904 14.643 66.5744 14.727 66.7004 14.727H68.6744C68.8004 14.727 68.8844 14.811 68.8844 14.937V16.659C68.8844 16.785 68.8004 16.869 68.6744 16.869H66.4694V22.056C66.4694 22.875 66.9314 23.085 67.4564 23.085C67.8764 23.085 68.3384 22.938 68.7164 22.707C68.8634 22.623 68.9684 22.665 68.9684 22.833V24.828C68.9684 24.933 68.9264 25.017 68.8424 25.08C68.2334 25.458 67.3724 25.71 66.4274 25.71C64.6844 25.71 63.1304 24.912 63.1304 22.476V16.869H62.2484C62.1224 16.869 62.0384 16.785 62.0384 16.659V14.937C62.0384 14.811 62.1224 14.727 62.2484 14.727H62.8154ZM73.4298 16.323C73.4298 16.638 73.7868 16.68 73.9128 16.407C74.3748 15.315 75.1308 14.496 76.6008 14.496C78.2178 14.496 78.9528 15.609 78.9528 17.373V25.29C78.9528 25.416 78.8688 25.5 78.7428 25.5H75.8238C75.6978 25.5 75.6138 25.416 75.6138 25.29V18.633C75.6138 17.709 75.2778 17.268 74.5848 17.268C73.8708 17.268 73.4298 17.709 73.4298 18.633V25.29C73.4298 25.416 73.3458 25.5 73.2198 25.5H70.3008C70.1748 25.5 70.0908 25.416 70.0908 25.29V10.548C70.0908 10.422 70.1748 10.338 70.3008 10.338H73.2198C73.3458 10.338 73.4298 10.422 73.4298 10.548V16.323Z' fill='%231E1E1E'/%3E%3Cpath d='M100.132 16.3203C105.58 17.3761 107.272 22.4211 107.318 27.4961C107.318 27.6101 107.226 27.7041 107.112 27.7041H100.252C100.138 27.7041 100.046 27.6121 100.046 27.5001C100.026 23.5629 99.3877 20.0896 95.4865 19.9396C95.3705 19.9356 95.2725 20.0276 95.2725 20.1456V27.5001C95.2725 27.6141 95.1806 27.7061 95.0666 27.7061H88.206C88.092 27.7061 88 27.6141 88 27.5001V8.75585C88 8.64187 88.092 8.54989 88.206 8.54989H95.0686C95.1826 8.54989 95.2745 8.64187 95.2745 8.75585V15.7764C95.2745 15.8804 95.3585 15.9644 95.4625 15.9644C95.5445 15.9644 95.6185 15.9104 95.6425 15.8324C97.4081 10.0416 100.709 8.58588 106.07 8.55189C106.184 8.55189 106.276 8.64387 106.276 8.75785V15.7604C106.276 15.8744 106.184 15.9664 106.07 15.9664H100.166C100.066 15.9664 99.9856 16.0464 99.9856 16.1464C99.9856 16.2304 100.048 16.3043 100.132 16.3203ZM118.918 20.7095V16.1704C118.918 16.0564 119.01 15.9644 119.124 15.9644H124.173C124.273 15.9644 124.353 15.8844 124.353 15.7844C124.353 15.6985 124.291 15.6245 124.207 15.6085C120.256 14.8246 118.432 12.5511 118.37 8.75585C118.368 8.64387 118.458 8.54989 118.572 8.54989H125.986C126.1 8.54989 126.192 8.64187 126.192 8.75585V11.9532C126.192 12.0672 126.284 12.1592 126.398 12.1592H130.649C130.763 12.1592 130.855 12.2511 130.855 12.3651V15.7624C130.855 15.8764 130.763 15.9684 130.649 15.9684H126.398C126.284 15.9684 126.192 16.0604 126.192 16.1744V19.8356C126.192 21.1294 126.986 21.5553 128.04 21.5553C129.692 21.5553 131.323 20.8114 131.977 20.4735C132.113 20.4035 132.277 20.5015 132.277 20.6555V26.3543C132.277 26.5063 132.193 26.6463 132.059 26.7183C131.413 27.0582 129.418 28 127.136 28C122.435 27.996 118.918 26.0824 118.918 20.7095ZM109.266 27.4981V16.1704C109.266 16.0564 109.358 15.9644 109.472 15.9644H116.334C116.448 15.9644 116.54 16.0564 116.54 16.1704V27.4981C116.54 27.6121 116.448 27.7041 116.334 27.7041H109.472C109.358 27.7021 109.266 27.6101 109.266 27.4981ZM108.876 11.4913C108.876 13.4189 110.238 14.9826 112.853 14.9826C115.469 14.9826 116.83 13.4189 116.83 11.4913C116.83 9.56369 115.471 8 112.853 8C110.238 8 108.876 9.56369 108.876 11.4913Z' fill='%231E1E1E'/%3E%3C/svg%3E");}.formkit-form[data-uid="5b146bf298"] .formkit-powered-by-convertkit:hover,.formkit-form[data-uid="5b146bf298"] .formkit-powered-by-convertkit:focus{background-color:#ffffff;-webkit-transform:scale(1.025) perspective(1px);-ms-transform:scale(1.025) perspective(1px);transform:scale(1.025) perspective(1px);opacity:1;}.formkit-form[data-uid="5b146bf298"] .formkit-powered-by-convertkit[data-variant="dark"],.formkit-form[data-uid="5b146bf298"] .formkit-powered-by-convertkit[data-variant="light"]{background-color:transparent;border-color:transparent;width:133px;}.formkit-form[data-uid="5b146bf298"] .formkit-powered-by-convertkit[data-variant="light"]{color:#ffffff;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg width='133' height='36' viewBox='0 0 133 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.861 25.5C0.735 25.5 0.651 25.416 0.651 25.29V10.548C0.651 10.422 0.735 10.338 0.861 10.338H6.279C9.072 10.338 10.668 11.451 10.668 13.824C10.668 15.819 9.219 16.932 8.001 17.226C7.707 17.268 7.707 17.625 8.022 17.688C9.912 18.108 11.088 19.116 11.088 21.321C11.088 23.715 9.429 25.5 6.426 25.5H0.861ZM5.397 23.085C6.825 23.085 7.518 22.224 7.518 21.006C7.518 19.683 6.825 18.948 5.397 18.948H4.2V23.085H5.397ZM5.313 16.617C6.51 16.617 7.245 15.945 7.245 14.601C7.245 13.383 6.51 12.753 5.25 12.753H4.2V16.617H5.313ZM17.9758 23.883C17.9758 23.568 17.6608 23.505 17.5348 23.799C17.0308 24.954 16.1698 25.731 14.5528 25.731C12.8728 25.731 12.0958 24.471 12.0958 22.707V14.937C12.0958 14.811 12.1798 14.727 12.3058 14.727H15.2248C15.3508 14.727 15.4348 14.811 15.4348 14.937V21.657C15.4348 22.581 15.7708 23.022 16.4638 23.022C17.1778 23.022 17.6188 22.581 17.6188 21.657V14.937C17.6188 14.811 17.7028 14.727 17.8288 14.727H20.7478C20.8738 14.727 20.9578 14.811 20.9578 14.937V25.29C20.9578 25.416 20.8738 25.5 20.7478 25.5H18.1858C18.0598 25.5 17.9758 25.416 17.9758 25.29V23.883ZM25.6141 25.29C25.6141 25.416 25.5301 25.5 25.4041 25.5H22.4851C22.3591 25.5 22.2751 25.416 22.2751 25.29V14.937C22.2751 14.811 22.3591 14.727 22.4851 14.727H25.4041C25.5301 14.727 25.6141 14.811 25.6141 14.937V25.29ZM23.9131 13.74C22.8001 13.74 22.0441 12.942 22.0441 11.934C22.0441 10.926 22.8001 10.107 23.9131 10.107C25.0051 10.107 25.7611 10.926 25.7611 11.934C25.7611 12.942 25.0051 13.74 23.9131 13.74ZM26.7883 10.548C26.7883 10.422 26.8723 10.338 26.9983 10.338H29.9173C30.0433 10.338 30.1273 10.422 30.1273 10.548V22.056C30.1273 22.749 30.2533 23.085 30.8203 23.085C31.0093 23.085 31.1983 23.043 31.3663 23.001C31.5133 22.959 31.6183 22.959 31.6183 23.127V25.059C31.6183 25.164 31.5763 25.269 31.4923 25.311C30.9673 25.521 30.2953 25.71 29.5813 25.71C27.7123 25.71 26.7883 24.639 26.7883 22.476V10.548ZM32.4237 14.727C32.8227 14.727 32.9277 14.538 32.9697 14.055L33.1167 12.039C33.1167 11.913 33.2217 11.829 33.3477 11.829H35.8887C36.0147 11.829 36.0987 11.913 36.0987 12.039V14.517C36.0987 14.643 36.1827 14.727 36.3087 14.727H38.2827C38.4087 14.727 38.4927 14.811 38.4927 14.937V16.659C38.4927 16.785 38.4087 16.869 38.2827 16.869H36.0777V22.056C36.0777 22.875 36.5397 23.085 37.0647 23.085C37.4847 23.085 37.9467 22.938 38.3247 22.707C38.4717 22.623 38.5767 22.665 38.5767 22.833V24.828C38.5767 24.933 38.5347 25.017 38.4507 25.08C37.8417 25.458 36.9807 25.71 36.0357 25.71C34.2927 25.71 32.7387 24.912 32.7387 22.476V16.869H31.8567C31.7307 16.869 31.6467 16.785 31.6467 16.659V14.937C31.6467 14.811 31.7307 14.727 31.8567 14.727H32.4237ZM51.3808 14.727C51.5068 14.727 51.5908 14.79 51.6118 14.916L52.3888 19.851L52.5778 21.174C52.6198 21.468 52.9558 21.468 52.9768 21.174C53.0398 20.712 53.0818 20.271 53.1658 19.83L53.8798 14.916C53.9008 14.79 53.9848 14.727 54.1108 14.727H56.6728C56.8198 14.727 56.8828 14.811 56.8618 14.958L54.6778 25.311C54.6568 25.437 54.5728 25.5 54.4468 25.5H51.3178C51.1918 25.5 51.1078 25.437 51.0868 25.311L50.1208 20.082L49.8898 18.633C49.8688 18.444 49.6588 18.444 49.6378 18.633L49.4068 20.103L48.5458 25.311C48.5248 25.437 48.4408 25.5 48.3148 25.5H45.2068C45.0808 25.5 44.9968 25.437 44.9758 25.311L42.8128 14.958C42.7918 14.811 42.8548 14.727 43.0018 14.727H45.9628C46.0888 14.727 46.1728 14.79 46.1938 14.916L46.9288 19.83C47.0128 20.271 47.0758 20.754 47.1388 21.195C47.2018 21.51 47.4748 21.531 47.5378 21.195L47.7478 19.872L48.6088 14.916C48.6298 14.79 48.7138 14.727 48.8398 14.727H51.3808ZM61.1582 25.29C61.1582 25.416 61.0742 25.5 60.9482 25.5H58.0292C57.9032 25.5 57.8192 25.416 57.8192 25.29V14.937C57.8192 14.811 57.9032 14.727 58.0292 14.727H60.9482C61.0742 14.727 61.1582 14.811 61.1582 14.937V25.29ZM59.4572 13.74C58.3442 13.74 57.5882 12.942 57.5882 11.934C57.5882 10.926 58.3442 10.107 59.4572 10.107C60.5492 10.107 61.3052 10.926 61.3052 11.934C61.3052 12.942 60.5492 13.74 59.4572 13.74ZM62.8154 14.727C63.2144 14.727 63.3194 14.538 63.3614 14.055L63.5084 12.039C63.5084 11.913 63.6134 11.829 63.7394 11.829H66.2804C66.4064 11.829 66.4904 11.913 66.4904 12.039V14.517C66.4904 14.643 66.5744 14.727 66.7004 14.727H68.6744C68.8004 14.727 68.8844 14.811 68.8844 14.937V16.659C68.8844 16.785 68.8004 16.869 68.6744 16.869H66.4694V22.056C66.4694 22.875 66.9314 23.085 67.4564 23.085C67.8764 23.085 68.3384 22.938 68.7164 22.707C68.8634 22.623 68.9684 22.665 68.9684 22.833V24.828C68.9684 24.933 68.9264 25.017 68.8424 25.08C68.2334 25.458 67.3724 25.71 66.4274 25.71C64.6844 25.71 63.1304 24.912 63.1304 22.476V16.869H62.2484C62.1224 16.869 62.0384 16.785 62.0384 16.659V14.937C62.0384 14.811 62.1224 14.727 62.2484 14.727H62.8154ZM73.4298 16.323C73.4298 16.638 73.7868 16.68 73.9128 16.407C74.3748 15.315 75.1308 14.496 76.6008 14.496C78.2178 14.496 78.9528 15.609 78.9528 17.373V25.29C78.9528 25.416 78.8688 25.5 78.7428 25.5H75.8238C75.6978 25.5 75.6138 25.416 75.6138 25.29V18.633C75.6138 17.709 75.2778 17.268 74.5848 17.268C73.8708 17.268 73.4298 17.709 73.4298 18.633V25.29C73.4298 25.416 73.3458 25.5 73.2198 25.5H70.3008C70.1748 25.5 70.0908 25.416 70.0908 25.29V10.548C70.0908 10.422 70.1748 10.338 70.3008 10.338H73.2198C73.3458 10.338 73.4298 10.422 73.4298 10.548V16.323Z' fill='white'/%3E%3Cpath d='M100.132 16.3203C105.58 17.3761 107.272 22.4211 107.318 27.4961C107.318 27.6101 107.226 27.7041 107.112 27.7041H100.252C100.138 27.7041 100.046 27.6121 100.046 27.5001C100.026 23.5629 99.3877 20.0896 95.4865 19.9396C95.3705 19.9356 95.2725 20.0276 95.2725 20.1456V27.5001C95.2725 27.6141 95.1806 27.7061 95.0666 27.7061H88.206C88.092 27.7061 88 27.6141 88 27.5001V8.75585C88 8.64187 88.092 8.54989 88.206 8.54989H95.0686C95.1826 8.54989 95.2745 8.64187 95.2745 8.75585V15.7764C95.2745 15.8804 95.3585 15.9644 95.4625 15.9644C95.5445 15.9644 95.6185 15.9104 95.6425 15.8324C97.4081 10.0416 100.709 8.58588 106.07 8.55189C106.184 8.55189 106.276 8.64387 106.276 8.75785V15.7604C106.276 15.8744 106.184 15.9664 106.07 15.9664H100.166C100.066 15.9664 99.9856 16.0464 99.9856 16.1464C99.9856 16.2304 100.048 16.3043 100.132 16.3203ZM118.918 20.7095V16.1704C118.918 16.0564 119.01 15.9644 119.124 15.9644H124.173C124.273 15.9644 124.353 15.8844 124.353 15.7844C124.353 15.6985 124.291 15.6245 124.207 15.6085C120.256 14.8246 118.432 12.5511 118.37 8.75585C118.368 8.64387 118.458 8.54989 118.572 8.54989H125.986C126.1 8.54989 126.192 8.64187 126.192 8.75585V11.9532C126.192 12.0672 126.284 12.1592 126.398 12.1592H130.649C130.763 12.1592 130.855 12.2511 130.855 12.3651V15.7624C130.855 15.8764 130.763 15.9684 130.649 15.9684H126.398C126.284 15.9684 126.192 16.0604 126.192 16.1744V19.8356C126.192 21.1294 126.986 21.5553 128.04 21.5553C129.692 21.5553 131.323 20.8114 131.977 20.4735C132.113 20.4035 132.277 20.5015 132.277 20.6555V26.3543C132.277 26.5063 132.193 26.6463 132.059 26.7183C131.413 27.0582 129.418 28 127.136 28C122.435 27.996 118.918 26.0824 118.918 20.7095ZM109.266 27.4981V16.1704C109.266 16.0564 109.358 15.9644 109.472 15.9644H116.334C116.448 15.9644 116.54 16.0564 116.54 16.1704V27.4981C116.54 27.6121 116.448 27.7041 116.334 27.7041H109.472C109.358 27.7021 109.266 27.6101 109.266 27.4981ZM108.876 11.4913C108.876 13.4189 110.238 14.9826 112.853 14.9826C115.469 14.9826 116.83 13.4189 116.83 11.4913C116.83 9.56369 115.471 8 112.853 8C110.238 8 108.876 9.56369 108.876 11.4913Z' fill='white'/%3E%3C/svg%3E");}@-webkit-keyframes formkit-bouncedelay-formkit-form-data-uid-5b146bf298-{0%,80%,100%{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}@keyframes formkit-bouncedelay-formkit-form-data-uid-5b146bf298-{0%,80%,100%{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}.formkit-form[data-uid="5b146bf298"] blockquote{padding:10px 20px;margin:0 0 20px;border-left:5px solid #e1e1e1;}.formkit-form[data-uid="5b146bf298"] .seva-custom-content{padding:15px;font-size:16px;color:#fff;mix-blend-mode:difference;}.formkit-form[data-uid="5b146bf298"] .formkit-modal.guard{max-width:420px;width:100%;} .formkit-form[data-uid="5b146bf298"]{max-width:700px;}.formkit-form[data-uid="5b146bf298"] [data-style="clean"]{width:100%;}.formkit-form[data-uid="5b146bf298"] .formkit-fields{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 auto;}.formkit-form[data-uid="5b146bf298"] .formkit-field,.formkit-form[data-uid="5b146bf298"] .formkit-submit{margin:0 0 15px 0;-webkit-flex:1 0 100%;-ms-flex:1 0 100%;flex:1 0 100%;}.formkit-form[data-uid="5b146bf298"] .formkit-powered-by-convertkit-container{margin:0;}.formkit-form[data-uid="5b146bf298"] .formkit-submit{position:static;}.formkit-form[data-uid="5b146bf298"][min-width~="700"] [data-style="clean"],.formkit-form[data-uid="5b146bf298"][min-width~="800"] [data-style="clean"]{padding:10px;padding-top:56px;}.formkit-form[data-uid="5b146bf298"][min-width~="700"] .formkit-fields[data-stacked="false"],.formkit-form[data-uid="5b146bf298"][min-width~="800"] .formkit-fields[data-stacked="false"]{margin-left:-5px;margin-right:-5px;}.formkit-form[data-uid="5b146bf298"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-field,.formkit-form[data-uid="5b146bf298"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-field,.formkit-form[data-uid="5b146bf298"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-submit,.formkit-form[data-uid="5b146bf298"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-submit{margin:0 5px 15px 5px;}.formkit-form[data-uid="5b146bf298"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-field,.formkit-form[data-uid="5b146bf298"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-field{-webkit-flex:100 1 auto;-ms-flex:100 1 auto;flex:100 1 auto;}.formkit-form[data-uid="5b146bf298"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-submit,.formkit-form[data-uid="5b146bf298"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-submit{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;} @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Libre+Baskerville&display=swap');.formkit-form[data-uid="5b146bf298"] .formkit-form{max-width:420px;margin:0 auto;}.formkit-form[data-uid="5b146bf298"] .formkit-input{font-family:'Libre Baskerville',serif !important;border:2px solid #957C3D !important;border-radius:8px !important;}.formkit-form[data-uid="5b146bf298"] .formkit-submit button{font-family:'League Spartan',sans-serif !important;background:linear-gradient(135deg,#957C3D 0%,#BFA181 100%) !important;color:#FFFFF0 !important;}</style></form>
+            <div class="validation-message" id="newsletter-message"></div>
+          <p class="privacy-notice">We respect your privacy. Unsubscribe at any time.</p>
+        </section>
+
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">What Readers Say</h2>
+      <article class="testimonial-item">
+        <p>"This is beautiful and intriguing. Also a great metaphor for life and uncertainty (as well as hope) about the future. Nice work :)."</p>
+        <p class="testimonial-author">– Alex</p>
+      </article>
+      <article class="testimonial-item">
+        <p>"Intrigued… want to know more."</p>
+        <p class="testimonial-author">– Sharon Murphy</p>
+      </article>
+      <article class="testimonial-item">
+        <p>"With his poetry, Ekau Charles offers readers a window into his world, sharing stories and emotions that resonate across cultures and generations."</p>
+        <p class="testimonial-author">– Joseph M.</p>
+      </article>
+      <article class="testimonial-item">
+        <p>"Ekau Charles crafts a story that is as emotionally resonant as it is suspenseful, exploring the costs of violence, the meaning of loyalty, and the enduring power of love in his novel 'Target'."</p>
+        <p class="testimonial-author">– Jolly M.</p>
+      </article>
+    </section>
+  
+  </main>
+
+  <div class="footer">
+    <div>
+      <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+      <a href="terms.html">Terms of Service</a> &nbsp;|&nbsp;
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/emegu.charles" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/EmeguCharles" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/charlito195" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/emegu-charles-99105b247" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ekaucharles" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=256700748964" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="margin-top:1em">&copy; 2026 Ekau Charles</p>
+    <p style="font-style: italic; font-size: 0.85rem; margin-top: 0.5em;">"Writing is the painting of the voice."</p>
+  </div>
+  
+  <!-- ConvertKit Newsletter Script -->
+  <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+  
+  <script>
+    // Mobile nav toggle
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      const expanded = nav.classList.toggle('open');
+      document.querySelector('.nav-toggle').setAttribute('aria-expanded', expanded);
+    }
+
+    // Works dropdown function
+    function toggleWorksDropdown(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const submenu = document.getElementById('works-submenu');
+      const toggle = document.getElementById('works-toggle');
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      submenu.style.display = expanded ? 'none' : 'block';
+    }
+
+    // Dual purpose CTA function
+    function dualPurposeCTA(event) {
+      event.preventDefault();
+      
+      if (window.innerWidth <= 768) {
+        window.location.href = 'novels.html#for-her';
+        return;
+      }
+      
+      const featuredSection = document.querySelector('.featured-book');
+      if (featuredSection) {
+        featuredSection.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+
+    // Keyboard accessibility for dropdown
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+      dropdown.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleWorksDropdown(e);
+        }
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        if (!dropdown.contains(e.target)) {
+          const submenu = dropdown.querySelector('.dropdown-menu');
+          const toggle = dropdown.querySelector('a');
+          submenu.style.display = 'none';
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // Modal open/close
+    const modal = document.getElementById('modal');
+    function openModal() {
+      modal.style.display = 'flex';
+      modal.focus();
+    }
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+    window.onkeydown = function(event) {
+      if (event.key === 'Escape' && modal.style.display === 'flex') {
+        closeModal();
+      }
+    };
+
+    // Site search functionality
+    const pages = [
+      {title: 'Home', url: 'index.html', desc: 'Welcome and introduction to Ekau Charles literary works.'},
+      {title: 'Poetry', url: 'poetry.html', desc: 'Collection of poems by Ekau Charles including Target Vol. II poetry.'},
+      {title: 'Novels', url: 'novels.html', desc: 'Explore novels by Ekau Charles: For Her, Target Vol. II, Stolen Hearts.'},
+      {title: 'For Her', url: 'novels.html#for-her', desc: 'Latest novel by Ekau Charles - heartbreaking tale of loss and redemption.'},
+      {title: 'Target Vol. II', url: 'novels.html#target-vol-ii', desc: 'Emotional suspense novel exploring violence, loyalty and love.'},
+      {title: 'Short Stories', url: 'short-stories.html', desc: 'Collection of captivating short stories by Ekau Charles.'},
+      {title: 'Flash Fiction', url: 'flash-fiction.html', desc: 'Bite-sized literary gems by Ekau Charles.'},
+      {title: 'Prose', url: 'prose.html', desc: 'Beautiful prose pieces exploring human emotion by Ekau Charles.'},
+      {title: 'About', url: 'about.html', desc: 'Learn more about Ekau Charles and his writing journey.'},
+      {title: 'Contact', url: 'contact.html', desc: 'Get in touch with Ekau Charles.'}
+    ];
+
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) {
+        searchResults.style.display = 'none';
+        searchResults.innerHTML = '';
+        return;
+      }
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(query) || page.desc.toLowerCase().includes(query)
+      );
+      if (filtered.length === 0) {
+        searchResults.innerHTML = '<div role="option" tabindex="0" style="padding:0.5em 0.75em;">No results found</div>';
+      } else {
+        searchResults.innerHTML = filtered.map(page => 
+          `<a href="${page.url}" role="option" tabindex="0">${page.title} - <small>${page.desc}</small></a>`
+        ).join('');
+      }
+      searchResults.style.display = 'block';
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.style.display = 'none';
+      }
+    });
+
+    searchInput.addEventListener('keydown', e => {
+      const items = Array.from(searchResults.querySelectorAll('a'));
+      if (items.length === 0) return;
+      let index = items.findIndex(item => item === document.activeElement);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (index < items.length - 1) items[index + 1].focus();
+        else items[0].focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (index > 0) items[index - 1].focus();
+        else items[items.length - 1].focus();
+      } else if (e.key === 'Escape') {
+        searchInput.focus();
+        searchResults.style.display = 'none';
+      }
+    });
+
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark" || (!currentTheme && prefersDarkScheme.matches)) {
+      document.body.classList.add("dark-mode");
+      darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      darkModeToggle.setAttribute("aria-label", "Toggle light mode");
+      darkModeToggle.setAttribute("title", "Toggle light mode");
+    }
+    darkModeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      if (document.body.classList.contains("dark-mode")) {
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        darkModeToggle.setAttribute("aria-label", "Toggle light mode");
+        darkModeToggle.setAttribute("title", "Toggle light mode");
+        localStorage.setItem("theme", "dark");
+      } else {
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        darkModeToggle.setAttribute("aria-label", "Toggle dark mode");
+        darkModeToggle.setAttribute("title", "Toggle dark mode");
+        localStorage.setItem("theme", "light");
+      }
+    });
+  </script>
+</body>
+</html>
+
