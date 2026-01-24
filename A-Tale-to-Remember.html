@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A Tale to Remember | Poetry by Ekau Charles</title>
+  <meta name="description" content="Read the complete poetry collection 'A Tale to Remember' by Ekau Charles." />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    body {
+      font-family: 'Libre Baskerville', serif;
+      margin: 0; background: #FFFDF6; color: #24221F;
+      transition: background 0.4s, color 0.4s;
+    }
+    .header {
+      background: #BFA181; color: #0A1828; padding: 1.2em 0; text-align: center;
+    }
+    .header-content {
+      display: flex; align-items: center; justify-content: center; gap: 1em;
+    }
+    .logo { height: 100px; }
+    .site-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+    }
+    .footer {
+      background: #BFA181;
+      color: #0A1828;
+      text-align: center;
+      padding: 1.2em 0;
+      transition: background 0.4s, color 0.4s;
+    }
+    .footer a {
+      color: inherit;
+      text-decoration: underline;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 600;
+      font-size: 1em;
+      transition: color 0.2s;
+    }
+    .footer a:hover { color: #957C3D; }
+    .footer .social-icons { margin-top: 1em; }
+    .footer .social-icons a {
+      color: #0A1828;
+      margin: 0 0.18em;
+      font-size: 1.15em;
+      text-decoration: none;
+      transition: color 0.2s;
+      vertical-align: middle;
+    }
+    .footer .social-icons a:hover { color: #957C3D; }
+    .footer p { margin: 1em 0 0 0; }
+    @media (max-width: 600px) {
+      .footer { padding: 1em 0; }
+      .logo { height: 58px; }
+      .footer .social-icons { font-size: 1em; }
+    }
+    main {
+      max-width: 1100px; margin: 30px auto 30px auto;
+      background: #FFFDF8; border-radius: 14px; box-shadow: 0 3px 20px rgba(0,0,0,0.07);
+      padding: 2em 2.5vw 2.5em 2.5vw;
+      display: flex; gap: 2em;
+    }
+    .sidebar {
+      min-width: 210px; max-width:280px; margin-top:0.6em;
+      background: #FAEBC6;
+      border-radius: 10px;
+      padding: 1.2em 1em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      overflow-y: auto; max-height:70vh;
+      display: flex; flex-direction: column;
+      gap: 1em;
+    }
+    .sidebar-controls {
+      display: flex;
+      gap: 0.6em;
+      align-items: center;
+      margin-bottom: 0.5em;
+    }
+    @media (max-width: 900px) {
+      main { flex-direction:column; }
+      .sidebar { max-width:100%; min-width:0; margin-bottom:2em; }
+      .poem-list { grid-template-columns: 1fr; }
+      .collection-header { flex-direction:column; align-items:center; }
+    }
+    @media (max-width:650px) {
+      main { padding:0.1em 0.1em 2em 0.1em; }
+      .collection-header h1 { font-size:1.3em }
+      .sidebar-controls { flex-direction:column; align-items: stretch; gap:0.6em; }
+    }
+    .sidebar h3 { margin-top:0; font-family:'League Spartan',sans-serif; font-size:1.05em; color:#957C3D; }
+    .poem-nav ul { list-style: none; padding: 0; margin: 0;}
+    .poem-nav li { margin-bottom: 0.6em; }
+    .poem-nav a {
+      color: #0A1828; text-decoration: none; padding: 0.2em 0.3em;
+      border-radius: 3px; transition: background 0.2s;
+      font-weight: 600; font-size: 1em;
+      font-family:'League Spartan',sans-serif;
+    }
+    .poem-nav a:hover, .poem-nav a:focus { background: #957C3D; color: #FFFDF8; }
+    .theme-btn { background:none; border:none; font-size:1.25em; cursor:pointer; color:#957C3D; }
+    .action-btn {
+      background-color: #957C3D; color: #FFFDF8;
+      border: none; border-radius: 5px; padding: 0.38em 1.1em;
+      font-family:'League Spartan',sans-serif; font-size:1em;
+      transition: background 0.2s, color 0.2s;
+      cursor:pointer;
+      text-align: center;
+      text-decoration:none;
+      display: inline-block;
+    }
+    .action-btn:hover, .action-btn:focus { background: #BFA181; color: #0A1828; }
+    .main-content {
+      flex:1; min-width:0;
+    }
+    .collection-cover img { width:170px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+    .collection-header {
+      display: flex; align-items: flex-end; gap: 1.4em;
+      margin-bottom: 1.3em;
+    }
+    .collection-header h1 {
+      font-family:'League Spartan',sans-serif;
+      font-size:2.1em; color:#0A1828; margin:0;
+    }
+    .collection-desc { font-size:1.13em; color:#615c51; margin-bottom:0.7em }
+    .author-note { font-style:italic; color:#AD990A; margin-bottom:2.1em; }
+    .poem-list {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em;
+      margin: 0; padding:0; list-style:none;
+    }
+    .poem-item {
+      background:#FFF9E6; border-radius:7px; padding:1em 1em 1.1em 1em;
+      box-shadow:0 2px 10px rgba(0,0,0,0.06);
+      margin-bottom:0.5em;
+      position:relative;
+      display:flex;flex-direction:column;
+    }
+    .poem-title {
+      font-family:'League Spartan',sans-serif;
+      font-size:1.18em; font-weight:700; color:#42390f; margin:0.25em 0 0.3em;
+    }
+    .poem-meta { color:#957C3D; font-size:0.98em; margin-bottom:0.7em }
+    .poem-tags { font-size:0.94em; color:#C19B54 }
+    .poem-actions { display:flex; gap:0.6em; margin-top:auto }
+    .share-btns { margin-top:0.6em; }
+    .share-btns a { margin-right:0.5em; color:#957C3D; font-size:1.15em; transition:color 0.2s }
+    .share-btns a:hover { color:#BFA181 }
+    /* Modal Styles */
+    .modal {
+      display:none; position:fixed; top:0; left:0; width:100vw; height:100vh;
+      background:rgba(36,34,31,0.62); justify-content:center; align-items:center; z-index:1000;
+    }
+    .modal.active { display:flex; }
+    .modal-content {
+      background:#FFFDF8; max-width:500px; width:92vw;
+      border-radius:10px; padding:2.2em 1.5em 1.6em; position:relative;
+      box-shadow:0 8px 32px rgba(80,70,40,0.13); overflow-y:auto; max-height:80vh;
+    }
+    .close-modal {
+      position:absolute; top: 1em; right:1.25em; background:none; border:none;
+      font-size:1.5em; color:#957C3D; cursor:pointer;
+    }
+    .modal .poem-title { font-size:1.25em }
+    .modal .poem-meta { margin-bottom:1em }
+    /* Dark mode */
+    body.dark-mode { background:#161310; color:#f7eed4 }
+    body.dark-mode main,body.dark-mode .modal-content { background:#231C15; color:#ffeec1 }
+    body.dark-mode .sidebar { background:#2d2321; color:#ffeec1 }
+    body.dark-mode h1,body.dark-mode .site-title,body.dark-mode .poem-title { color:#FFD966; }
+    body.dark-mode .header { background:#333}
+    
+    body.dark-mode .footer {
+      background-color: #333333;
+      color: #FFD966;
+    }
+    
+    body.dark-mode .social-icons a {
+      color: #FFD966;
+    }
+    body.dark-mode .social-icons a:hover {
+      color: #FFC107;
+    }
+    body.dark-mode .poem-item,body.dark-mode .modal-content { background:#292419 }
+    body.dark-mode .action-btn,body.dark-mode .share-btns a { color:#FFD966 }
+    body.dark-mode .poem-meta,body.dark-mode .poem-tags { color:#e1a82a }
+    
+    @media (max-width: 768px) {
+      .header-content { flex-direction: column; text-align: center; }
+      .logo { height: 70px; }
+      .site-title { font-size: 1.8rem; }
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <a href="index.html"><img src="img/open_trademark.webp" alt="Ekau Logo" class="logo"></a>
+      <div>
+        <div style="font-family:'Libre Baskerville',serif; font-size:1.1rem; color:#957C3D;">Official Website of</div>
+        <div class="site-title">Ekau Charles</div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <aside class="sidebar" aria-label="Section navigation">
+      <div class="sidebar-controls">
+        <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <a href="poetry.html" class="action-btn" style="margin: 0;">&#8592; All Collections</a>
+      </div>
+      <h3>Jump to Poem</h3>
+      <nav class="poem-nav" aria-label="List of poems">
+        <ul id="toc-list"></ul>
+      </nav>
+    </aside>
+    <div class="main-content">
+      <div class="collection-header">
+        <div class="collection-cover"><img src="covers/A_Tale_to_Remember.webp" alt="A Tale to Remember Book Cover"></div>
+        <div>
+          <h1>A Tale to Remember</h1>
+          <div class="collection-desc">
+            "A Tale to Remember" is a heartfelt collection of poetry that explores the complexities of love, friendship, family, and personal growth through the lens of everyday experiences and deep emotional reflection.
+          </div>
+          <div class="author-note">
+            Author’s note: This collection was inspired by the tranquil mornings in my village, where every breeze seemed to carry a story.
+          </div>
+        </div>
+      </div>
+      <section>
+        <ol class="poem-list">
+          <!-- POEM 1: Only first verse in body -->
+          <li class="poem-item" id="poem-1">
+            <div class="poem-title">143 (I Love You)</div>
+            <div class="poem-meta">Theme: Love · <span class="poem-tags">#Romance #Affection</span></div>
+            <div>
+              <p>
+                If I were a river<br>
+                My heart would be its source<br>
+                And your heart would be its mouth<br>
+                Its water would be called love<br>
+                Ever wondered why mountains don’t meet<br>
+                They don’t have feelings<br>
+                Love can move mountains
+              </p>
+            </div>
+            <div class="poem-actions">
+              <button class="action-btn" onclick="openModal('poem-modal-1')">Read in Modal</button>
+              <div class="share-btns" aria-label="Share poem">
+                <a href="#" title="Share on Facebook" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Share on Twitter" aria-label="Share on Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" title="Share on WhatsApp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </li>
+          <!-- POEM 2: Only first verse in body -->
+          <li class="poem-item" id="poem-2">
+            <div class="poem-title">A Friend in Need</div>
+            <div class="poem-meta">Theme: Friendship · <span class="poem-tags">#Loyalty #Support</span></div>
+            <div>
+              <p>
+                Why do you<br>
+                Keep me close still?<br>
+                When we both took<br>
+                Two different paths<br>
+                Yet those close<br>
+                Are fleeing away from me
+              </p>
+            </div>
+            <div class="poem-actions">
+              <button class="action-btn" onclick="openModal('poem-modal-2')">Read in Modal</button>
+              <div class="share-btns" aria-label="Share poem">
+                <a href="#" title="Share on Facebook" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Share on Twitter" aria-label="Share on Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" title="Share on WhatsApp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <!-- Optional: CTA for full book -->
+        <section style="margin-top: 2em; text-align: center;">
+          <p style="font-size: 1.2em; color: #615c51;">Want to read all 90 heartfelt poems?</p>
+          <a href="https://amazon.com/Tale-Remember-Ekau-Emegu-Charles-ebook/dp/B0BQ5MWTR5" class="action-btn" style="font-size: 1.1em;">Get the Complete Collection</a>
+        </section>
+      </section>
+    </div>
+  </main>
+  <div class="footer">
+    <div>
+      <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+      <a href="terms.html">Terms of Service</a> &nbsp;|&nbsp;
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+    <div class="social-icons" style="margin-top:1em;">
+      <a href="https://www.facebook.com/emegu.charles" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/EmeguCharles" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/charlito195" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/emegu-charles-99105b247" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ekaucharles" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=256700748964" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="margin-top:1em">&copy; 2026 Ekau Charles</p>
+    <p style="font-style: italic; font-size: 0.85rem; margin-top: 0.5em;">“Writing is the painting of the voice.”</p>
+  </div>
+
+  <!-- Modals for Poems (specific: poem 1 full, poem 2 customized full) -->
+  <div class="modal" id="poem-modal-1">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close" onclick="closeModal('poem-modal-1')">&times;</button>
+      <div class="poem-title">143 (I Love You)</div>
+      <div class="poem-meta">Theme: Love · <span class="poem-tags">#Romance #Affection</span></div>
+      <div>
+        <p>
+          If I were a river<br>
+          My heart would be its source<br>
+          And your heart would be its mouth<br>
+          Its water would be called love<br>
+          Ever wondered why mountains don’t meet<br>
+          They don’t have feelings<br>
+          Love can move mountains
+        </p>
+        <p>
+          Without you<br>
+          I’m all out of love<br>
+          I’m lost without you<br>
+          And can’t live without you<br>
+          I feel a blank space left within me<br>
+          A blank space that creates darkness<br>
+          Darkness amidst the light
+        </p>
+        <p>
+          Two wrongs don’t make it right<br>
+          Ride with me<br>
+          And I’ll ride with you<br>
+          Off to the far off lands<br>
+          Where no one knows us<br>
+          Except for the sun, the moon and the stars<br>
+          Because I’ve got you<br>
+          And you’ve got me<br>
+          Nothing else matters.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="poem-modal-2">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close" onclick="closeModal('poem-modal-2')">&times;</button>
+      <div class="poem-title">A Friend in Need</div>
+      <div class="poem-meta">Theme: Friendship · <span class="poem-tags">#Loyalty #Support</span></div>
+      <div>
+        <p>
+          Why do you<br>
+          Keep me close still?<br>
+          When we both took<br>
+          Two different paths<br>
+          Yet those close<br>
+          Are fleeing away from me
+        </p>
+        <p>
+          You write to me,<br>
+          You text me<br>
+          Even when I don’t reply,<br>
+          You come face to face with me<br>
+          Even went to the lengths<br>
+          Of looking for my number
+        </p>
+        <p>
+          Talk about the happiness<br>
+          Talk about the sadness<br>
+          The joy and sorrow<br>
+          All needed is a friend<br>
+          Who is never going to leave<br>
+          Stay with me no matter what.
+        </p>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Generate dynamic TOC for 90 poems; links 1 & 2 internal, rest external
+    const poemTitles = [
+      "143 (I Love You)",
+      "A Friend in Need",
+      "A Hero Comes Along",
+      "A New World",
+      "A Spring Back to Life",
+      "African Woman",
+      "All Out of Love",
+      "Alone",
+      "An Unknown Brother",
+      "Best Friend",
+      "Better Way",
+      "Break Up",
+      "Building Castles in the Air",
+      "Charlie's Sad",
+      "Crazy Life Vitae",
+      "Dearing Father",
+      "Deceptors",
+      "Defeat",
+      "Did You?",
+      "Disastrous Day",
+      "A Hero Comes Along",
+      "Do You Know?",
+      "Dreamland",
+      "Education",
+      "Fallen Heroes",
+      "Flying",
+      "For Your Eyes Only",
+      "Friends",
+      "Gone With the Wind",
+      "Goodbye, My Rose",
+      "Great Things Await",
+      "Happy Birthday",
+      "He Knows",
+      "Heavenly Kingdom",
+      "Hey June",
+      "Hope",
+      "How It All Begins",
+      "I don't Know",
+      "I Have a Dream",
+      "I Have to Go Away",
+      "I See Ne'er Before",
+      "I Wonder",
+      "Illusionists",
+      "Isn't It a Wonder?",
+      "It's Time",
+      "Leaving",
+      "Light of the World",
+      "Like Nature",
+      "Little Brother",
+      "Lonely Heart",
+      "Look At Me",
+      "Looking Beyond",
+      "Love is an Idiot",
+      "Mamma",
+      "Mbula (I Get Lost)",
+      "Moments",
+      "Mother Nature",
+      "My Love is Your Love",
+      "My Place of Peace",
+      "My Sunshine",
+      "My Villain",
+      "Native Africa",
+      "Never Dead",
+      "No Man is an Island",
+      "October",
+      "Ordinary Love",
+      "Past Times, The Future",
+      "Promise",
+      "Revenge",
+      "Seems Like Only Yesterday",
+      "Sister's Love",
+      "Stars",
+      "Stranger",
+      "Sudden Move",
+      "Sweet Girl",
+      "Sweet Mamma",
+      "The Beach on the North Shore",
+      "The Depressing Poem",
+      "The Feeling",
+      "The Lady With Large Bosoms",
+      "The One",
+      "The Prefect",
+      "This Cold World",
+      "This Girl",
+      "To Love You More",
+      "True Friend",
+      "Waterfall",
+      "Whoever You Are",
+      "You",
+      "You're Still the One",
+      // ... extend if you have specific titles, else will be 'Poem X'
+    ];
+    const tocList = document.getElementById('toc-list');
+    for (let i = 1; i <= 90; i++) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      let title = poemTitles[i-1] || `Poem ${i}`;
+      if (i === 1) {
+        a.href = "#poem-1"; a.textContent = title;
+      } else if (i === 2) {
+        a.href = "#poem-2"; a.textContent = title;
+      } else {
+        a.href = `https://yourbookstore.com/a-tale-to-remember#poem-${i}`;
+        a.target = "_blank"; a.rel = "noopener";
+        a.textContent = title;
+      }
+      li.appendChild(a);
+      tocList.appendChild(li);
+    }
+
+    // Modal logic:
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal.active').forEach(el => {
+          el.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
+    });
+
+    // Theme toggle:
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    function setTheme(dark) {
+      if(dark){
+        document.body.classList.add('dark-mode');
+        themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        themeToggleBtn.setAttribute("aria-label", "Toggle light mode");
+      } else {
+        document.body.classList.remove('dark-mode');
+        themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        themeToggleBtn.setAttribute("aria-label", "Toggle dark mode");
+      }
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+    themeToggleBtn.addEventListener('click', function() {
+      setTheme(!document.body.classList.contains('dark-mode'));
+    });
+    // On load, respect system or saved choice
+    (() => {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) setTheme(true);
+    })();
+  </script>
+</body>
+</html>
