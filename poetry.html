@@ -1,0 +1,1038 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ekau Charles | Poetry</title>
+  <meta name="description" content="Explore the poetry collections and individual poems by Ekau Charles. Dive into lyrical verses and heartfelt expressions." />
+  <link rel="preload" href="img/open_trademark.png" as="image" />
+  <link rel="preload" href="covers/A_Tale_to_Remember.webp" as="image" />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Poetry",
+    "description": "Explore the poetry collections and individual poems by Ekau Charles.",
+    "hasPart": [
+      {
+        "@type": "CreativeWork",
+        "name": "A Tale to Remember",
+        "genre": "Nature, Love, Reflection",
+        "url": "poetry.html#a-tale-to-remember"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Moments",
+        "genre": "Loss, Hope, Resilience",
+        "url": "poetry.html#moments"
+      }
+    ]
+  }
+  </script>
+  <style>
+    /* Global Reset */
+    * {
+      box-sizing: border-box;
+    }
+    /* Body and typography */
+    body {
+      font-family: 'Libre Baskerville', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFFFF0;
+      color: #333333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    h1, h2, h3 {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+      color: #0A1828;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      transition: color 0.3s ease;
+    }
+    a {
+      color: #0A1828;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover, a:focus {
+      color: #957C3D;
+      outline: none;
+    }
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-color: #BFA181;
+      padding: 1em 2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .logo {
+      height: 100px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      align-items: center;
+    }
+    nav a {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5em 0.75em;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-decoration: underline;
+    }
+    nav a:hover, nav a:focus {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      text-decoration: none;
+    }
+    nav a[aria-current="page"] {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      cursor: default;
+    }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #0A1828;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .nav-toggle:hover, .nav-toggle:focus {
+      color: #957C3D;
+      outline: none;
+    }
+    #nav-menu.open {
+      display: flex !important;
+      flex-direction: column;
+      width: 100%;
+      background-color: #BFA181;
+      padding: 1em 0;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    /* Search */
+    .search-container {
+      position: relative;
+      margin-left: 1em;
+      max-width: 250px;
+      width: 100%;
+    }
+    .search-input-wrapper {
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 0.4em 2.5em 0.4em 0.75em;
+      font-size: 1rem;
+      border: 2px solid #957C3D;
+      border-radius: 4px;
+      font-family: 'Libre Baskerville', serif;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+    .search-icon {
+      position: absolute;
+      right: 0.75em;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #957C3D;
+      pointer-events: none;
+      font-size: 1.1rem;
+    }
+    .search-results {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      right: 0;
+      background: #FFF9E6;
+      border: 1px solid #957C3D;
+      border-radius: 0 0 4px 4px;
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 200;
+      display: none;
+      font-family: 'Libre Baskerville', serif;
+    }
+    .search-results a {
+      display: block;
+      padding: 0.5em 0.75em;
+      color: #0A1828;
+      border-bottom: 1px solid #BFA181;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .search-results a:last-child {
+      border-bottom: none;
+    }
+    .search-results a:hover, .search-results a:focus {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      outline: none;
+    }
+    /* Main content area */
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1em 4em;
+      transition: color 0.3s ease;
+    }
+    /* Section intro paragraph consistent with homepage */
+    .section-intro {
+      color: #444444;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.1rem;
+      margin-bottom: 1.5em;
+      transition: color 0.3s ease;
+    }
+    /* Featured Poem */
+    .featured-poem {
+      background: #FFF3C6;
+      border-left: 6px solid #957C3D;
+      border-radius: 0.5em;
+      padding: 1.5em 1em 1.5em 1.5em;
+      margin-bottom: 2em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: relative;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .featured-label {
+      position: absolute;
+      top: 0.5em;
+      left: 1em;
+      background: #957C3D;
+      color: #FFFFF0;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 0.2em 0.8em;
+      border-radius: 0 0.5em 0.5em 0;
+      font-family: 'League Spartan', sans-serif;
+      letter-spacing: 1px;
+      user-select: none;
+    }
+    .featured-poem:focus-within,
+    .featured-poem:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      outline: none;
+      cursor: pointer;
+    }
+    .poem-title {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 0.25em;
+      color: #0A1828;
+      transition: color 0.3s ease;
+    }
+    .poem-tags {
+      margin-bottom: 1em;
+      font-size: 0.95rem;
+      color: #957C3D;
+      font-family: 'League Spartan', sans-serif;
+      letter-spacing: 1px;
+    }
+    .poem-tags span {
+      background: #F5E7C4;
+      color: #957C3D;
+      border-radius: 3px;
+      padding: 0.15em 0.6em;
+      margin-right: 0.3em;
+      font-size: 0.95em;
+      display: inline-block;
+      margin-bottom: 0.2em;
+    }
+    .audio-player {
+      margin-bottom: 1em;
+      width: 100%;
+      max-width: 500px;
+    }
+    .poem-excerpt {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.1rem;
+      color: #444444;
+      margin-bottom: 0.5em;
+      transition: color 0.3s ease;
+    }
+    .author-note {
+      font-size: 0.95rem;
+      color: #888888;
+      font-style: italic;
+      margin-bottom: 1em;
+      transition: color 0.3s ease;
+    }
+    /* Buttons consistent with homepage */
+    .btn {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+      font-weight: 700;
+      font-family: 'League Spartan', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      align-self: flex-start;
+      display: inline-block;
+    }
+    .btn:hover, .btn:focus {
+      background-color: #BFA181;
+      color: #0A1828;
+      outline: none;
+    }
+    /* Poetry collection section */
+    .poetry-collection {
+      margin-bottom: 3em;
+    }
+    .collection-flex {
+      display: flex;
+      align-items: stretch;
+      gap: 2em;
+      margin-bottom: 1em;
+      flex-wrap: wrap;
+    }
+    .collection-cover img {
+      width: 180px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      display: block;
+    }
+    .collection-content {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .collection-content h2 {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      color: #0A1828;
+      font-family: 'League Spartan', sans-serif;
+    }
+    .collection-desc {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1rem;
+      color: #444444;
+      margin-bottom: 1em;
+      transition: color 0.3s ease;
+    }
+    .collection-content .author-note {
+      margin-top: 0;
+      font-style: italic;
+      color: #888888;
+    }
+    /* Video Poems Section */
+    #poetry-videos .collection-flex {
+      flex-direction: column;
+      margin-bottom: 1.5em;
+      align-items: flex-start;
+    }
+    /* Flex container for videos */
+    #poetry-videos .video-container {
+      display: flex;
+      gap: 2em;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0.5em;
+      margin-bottom: 3em;
+    }
+    #poetry-videos figure {
+      flex: 1 1 300px;
+      max-width: 350px;
+      margin: 0;
+    }
+    #poetry-videos figcaption {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.5em;
+      color: #0A1828;
+      font-weight: 600;
+    }
+    #poetry-videos iframe,
+    #poetry-videos video {
+      width: 100%;
+      height: 200px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    /* Share buttons */
+    .share-buttons {
+      margin-top: 1em;
+      display: flex;
+      gap: 0.5em;
+    }
+    .share-buttons a {
+      color: #957C3D;
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+    }
+    .share-buttons a:hover, .share-buttons a:focus {
+      color: #BFA181;
+      outline: none;
+    }
+    /* Modal */
+    #poem-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #poem-modal-content {
+      background: #FFFFF0;
+      max-width: 600px;
+      width: 90%;
+      padding: 2em;
+      border-radius: 0.5em;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      max-height: 80vh;
+      overflow-y: auto;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      color: #333333;
+      font-family: 'Libre Baskerville', serif;
+    }
+    #poem-modal-close {
+      position: absolute;
+      top: 0.5em;
+      right: 0.75em;
+      font-size: 1.5rem;
+      color: #957C3D;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    #poem-modal-close:hover, #poem-modal-close:focus {
+      color: #BFA181;
+      outline: none;
+    }
+    /* Footer */
+    .footer {
+      background: #BFA181;
+      color: #0A1828;
+      text-align: center;
+      padding: 1.2em 0;
+      transition: background 0.4s, color 0.4s;
+    }
+    .footer a {
+      color: inherit;
+      text-decoration: underline;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 600;
+      font-size: 1em;
+      transition: color 0.2s;
+    }
+    .footer a:hover { color: #957C3D; }
+    .footer .social-icons { margin-top: 1em; }
+    .footer .social-icons a {
+      color: #0A1828;
+      margin: 0 0.18em;
+      font-size: 1.15em;
+      text-decoration: none;
+      transition: color 0.2s;
+      vertical-align: middle;
+    }
+    .footer .social-icons a:hover { color: #957C3D; }
+    .footer p { margin: 1em 0 0 0; }
+    @media (max-width: 600px) {
+      .footer { padding: 1em 0; }
+      .logo { height: 58px; }
+      .footer .social-icons { font-size: 1em; }
+    }
+    /* Call to action */
+    .cta-section {
+      text-align: center;
+      margin-top: 3em;
+    }
+    /* Site intro reuse */
+    .site-intro {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1.5em;
+      justify-content: center;
+    }
+    .site-intro-top {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.3rem;
+      color: #957C3D;
+      letter-spacing: 1px;
+      margin-bottom: -0.3em;
+    }
+    .site-intro-name {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: #0A1828;
+      font-weight: normal;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+    /* ✅ MOBILE RESPONSIVE IMPROVEMENTS */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: row !important;
+        align-items: center !important;
+        padding: 0.5em 1em !important;
+      }
+      
+      .logo-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5em !important;
+        flex: 1 !important;
+        min-width: 0;
+      }
+      
+      .logo {
+        height: 50px !important;
+        flex-shrink: 0;
+      }
+      
+      .site-intro {
+        margin-left: 0 !important;
+        margin-right: auto;
+        flex: 1;
+        min-width: 0;
+      }
+      
+      .site-intro-name {
+        font-size: 2.25rem !important;
+        line-height: 1 !important;
+        white-space: nowrap !important;
+      }
+      
+      .site-intro-top {
+        font-size: 0.85rem !important;
+        white-space: nowrap !important;
+      }
+      
+      .nav-toggle {
+        display: block;
+        order: 3 !important;
+        margin-left: auto !important;
+      }
+      
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        order: 2;
+      }
+      
+      .search-container {
+        order: 4 !important;
+        width: 100% !important;
+        margin-top: 0.5em !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+      }
+      
+      nav#nav-menu.open {
+        display: flex !important;
+      }
+
+      /* ✅ NEW POETRY COLLECTION MOBILE LAYOUT */
+      .poetry-collection .collection-flex {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        gap: 1em;
+      }
+      
+      .poetry-collection .collection-cover {
+        order: -1;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+      }
+      
+      .poetry-collection .collection-cover img {
+        width: 100%;
+        height: auto;
+        max-width: 180px;
+      }
+      
+      .poetry-collection .collection-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1em;
+      }
+      
+      .poetry-collection .collection-content h2 {
+        margin-top: 0.5em;
+      }
+      
+      .poetry-collection .btn {
+        margin-top: 0.5em;
+        align-self: center;
+      }
+      
+      .poetry-collection .author-note {
+        margin-top: 0.5em;
+        text-align: center;
+      }
+
+      /* Video responsive fixes */
+      #poetry-videos video {
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+    }
+    /* Dark mode */
+    body.dark-mode {
+      background-color: #121212;
+      color: #E0E0E0;
+    }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+      color: #FFD966;
+    }
+    body.dark-mode a {
+      color: #FFD966;
+    }
+    body.dark-mode a:hover, body.dark-mode a:focus {
+      color: #FFC107;
+    }
+    body.dark-mode header {
+      background-color: #333333;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    }
+    body.dark-mode .footer {
+      background-color: #333333;
+      color: #FFD966;
+    }
+    body.dark-mode nav a {
+      color: #FFD966;
+    }
+    body.dark-mode nav a:hover, body.dark-mode nav a:focus {
+      background-color: #FFC107;
+      color: #121212;
+    }
+    body.dark-mode .search-input {
+      background-color: #333333;
+      color: #E0E0E0;
+      border-color: #FFD966;
+    }
+    body.dark-mode .search-results {
+      background: #222222;
+      border-color: #FFD966;
+      color: #E0E0E0;
+    }
+    body.dark-mode .search-results a {
+      color: #FFD966;
+      border-bottom: 1px solid #BFA181;
+    }
+    body.dark-mode .search-results a:hover, body.dark-mode .search-results a:focus {
+      background-color: #FFC107;
+      color: #121212;
+    }
+    body.dark-mode .section-intro,
+    body.dark-mode .poem-excerpt,
+    body.dark-mode .collection-desc,
+    body.dark-mode .author-note {
+      color: #E0E0E0;
+    }
+    body.dark-mode .featured-poem {
+      background: #222222;
+      border-left-color: #FFD966;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+    }
+    body.dark-mode .featured-label {
+      background: #FFD966;
+      color: #222222;
+    }
+    body.dark-mode .poem-title,
+    body.dark-mode .collection-content h2 {
+      color: #FFD966;
+    }
+    body.dark-mode .poem-tags,
+    body.dark-mode .share-buttons a {
+      color: #FFD966;
+    }
+    body.dark-mode .poem-tags span {
+      background: #444444;
+      color: #FFD966;
+      border-radius: 3px;
+    }
+    body.dark-mode .btn {
+      background-color: #FFD966;
+      color: #222222;
+      border: none;
+    }
+    body.dark-mode .btn:hover, body.dark-mode .btn:focus {
+      background-color: #FFC107;
+      color: #121212;
+      outline: none;
+    }
+    body.dark-mode #poem-modal-content {
+      background: #222222;
+      color: #E0E0E0;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.2);
+    }
+    body.dark-mode #poem-modal-close {
+      color: #FFD966;
+      transition: color 0.3s ease;
+    }
+    body.dark-mode #poem-modal-close:hover, body.dark-mode #poem-modal-close:focus {
+      color: #FFC107;
+      outline: none;
+    }
+    body.dark-mode .social-icons a {
+      color: #FFD966;
+    }
+    body.dark-mode .social-icons a:hover {
+      color: #FFC107;
+    }
+    /* Skip link consistent with homepage */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 0;
+      top: 0;
+      width: auto;
+      height: auto;
+      background: #FFD966;
+      color: #0A1828;
+      padding: 0.5em;
+      z-index: 3000;
+      text-decoration: none;
+    }
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .dropdown > a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25em;
+      text-decoration: underline;
+      color: #0A1828;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #BFA181;
+      min-width: 160px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      padding: 0.5em 0;
+      z-index: 1000;
+      margin-top: 0.5em;
+      list-style: none;
+    }
+    .dropdown-menu li a {
+      display: block;
+      padding: 0.5em 1em;
+      color: #0A1828;
+      text-decoration: none;
+      font-weight: 600;
+      font-family: 'League Spartan', sans-serif;
+    }
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a:focus {
+      background-color: #957C3D;
+      color: #FFFFF0;
+      outline: none;
+    }
+    /* UNDERLINE ALL NAVIGATION LINKS */
+    nav a,
+    .dropdown > a,
+    .dropdown-menu li a {
+      text-decoration: underline;
+    }
+    /* REMOVE UNDERLINE ON HOVER */
+    nav a:hover, nav a:focus,
+    .dropdown > a:hover, .dropdown > a:focus,
+    .dropdown-menu li a:hover, .dropdown-menu li a:focus {
+      text-decoration: none;
+    }
+    /* Show dropdown on hover and focus */
+    .dropdown:hover > .dropdown-menu,
+    .dropdown:focus-within > .dropdown-menu {
+      display: block;
+    }
+    .dropdown > a i {
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header>
+    <img src="img/open_trademark.png" alt="Ekau Logo" class="logo" loading="lazy" />
+    <div class="site-intro">
+      <span class="site-intro-top">Official Website of</span>
+      <span class="site-intro-name">Ekau Charles</span>
+    </div>
+    <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
+    <nav id="nav-menu" role="navigation" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <div class="dropdown" tabindex="0">
+        <a href="#" id="works-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="works-submenu" onclick="toggleWorksDropdown(event)">
+          Works <i class="fas fa-caret-down"></i>
+        </a>
+        <ul id="works-submenu" class="dropdown-menu" role="menu" aria-label="Submenu for Works">
+          <li role="none"><a role="menuitem" href="poetry.html" aria-current="page">Poetry</a></li>
+          <li role="none"><a role="menuitem" href="novels.html">Novels</a></li>
+          <li role="none"><a role="menuitem" href="short-stories.html">Short Stories</a></li>
+          <li role="none"><a role="menuitem" href="flash-fiction.html">Flash Fiction</a></li>
+          <li role="none"><a role="menuitem" href="prose.html">Prose</a></li>
+        </ul>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="search-container" role="search">
+      <div class="search-input-wrapper">
+        <input type="search" id="search-input" class="search-input" placeholder="Search site…" aria-label="Search site" autocomplete="off" />
+        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+      </div>
+      <div id="search-results" class="search-results" role="listbox" aria-live="polite"></div>
+    </div>
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode" style="background:none; border:none; font-size:1.5rem; cursor:pointer; color:#0A1828; transition: color 0.3s ease; margin-left: 1em;">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <h1>Poetry</h1>
+    <p class="section-intro">Welcome to my poetic world. Here you'll find collections and standalone poems that explore nature, love, resilience, and the depths of human emotion. Each piece is a reflection of my journey and the stories that shape us all.</p>
+
+    <section class="poetry-collection" id="a-tale-to-remember">
+      <div class="collection-flex">
+        <div class="collection-cover">
+          <img src="covers/A_Tale_to_Remember.webp" alt="A Tale to Remember Book Cover" loading="lazy" />
+        </div>
+        <div class="collection-content">
+          <h2>A Tale to Remember</h2>
+          <p class="collection-desc">"A Tale to Remember" is a heartfelt collection of poetry that explores the complexities of love, friendship, family, and personal growth through the lens of everyday experiences and deep emotional reflection.</p>
+          <a class="btn" href="a-tale-to-remember.html" aria-label="View poems in A Tale to Remember">View Poems</a>
+          <div class="author-note">Author's note: This collection was inspired by the tranquil reflections of a young naive boy...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Updated Video Poems Section -->
+    <section class="poetry-collection" id="poetry-videos" aria-label="Poems in Video Format">
+      <div class="collection-flex">
+        <div class="collection-content" style="flex-basis: 100%;">
+          <h2>Poems in Video</h2>
+          <p class="collection-desc">Experience select poems in a new dimension—spoken and visualized through video.</p>
+        </div>
+      </div>
+      <div class="video-container">
+        <!-- Poem Video 1: MBULA as local video -->
+        <figure>
+          <figcaption>MBULA (I GET LOST)</figcaption>
+          <video controls poster="covers/MBULA.webp" width="100%" height="auto" loading="lazy">
+            <source src="videos/MBULA.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-label="Subscribe call to action">
+      <h2>Stay Inspired</h2>
+      <p>Subscribe to my newsletter for new poems, audio readings, and exclusive updates.</p>
+      <a href="index.html#newsletter" class="btn" aria-label="Subscribe to newsletter">Subscribe Now</a>
+    </section>
+  </main>
+
+  <div class="footer">
+    <div>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Service</a> | 
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/emegu.charles" target="_blank" aria-label="Facebook" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/EmeguCharles" target="_blank" aria-label="Twitter" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/charlito195" target="_blank" aria-label="Instagram" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/emegu-charles-99105b247" target="_blank" aria-label="LinkedIn" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ekaucharles" target="_blank" aria-label="GitHub" rel="noopener"><i class="fab fa-github"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=256700748964" target="_blank" aria-label="WhatsApp" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2026 Ekau Charles</p>
+    <p style="font-style: italic; font-size: 0.85rem; margin-top: 0.5em;">"Writing is the painting of the voice."</p>
+  </div>
+
+  <!-- Poem Modal -->
+  <div id="poem-modal" role="dialog" aria-modal="true" aria-labelledby="poem-modal-title" aria-describedby="poem-modal-full" tabindex="-1" style="display:none;">
+    <div id="poem-modal-content">
+      <button id="poem-modal-close" aria-label="Close poem preview">&times;</button>
+      <h2 id="poem-modal-title"></h2>
+      <div id="poem-modal-full" style="margin:1em 0;"></div>
+    </div>
+  </div>
+
+  <script>
+    // Navigation toggle for mobile
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      const expanded = nav.classList.toggle('open');
+      document.querySelector('.nav-toggle').setAttribute('aria-expanded', expanded);
+    }
+
+    // Dropdown toggle for Works menu
+    function toggleWorksDropdown(event) {
+      event.preventDefault();
+      const toggle = event.currentTarget;
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      const menu = document.getElementById('works-submenu');
+      menu.style.display = expanded ? 'none' : 'block';
+    }
+    
+    // Keyboard accessibility for dropdown
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+      dropdown.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const menu = dropdown.querySelector('.dropdown-menu');
+          const expanded = dropdown.querySelector('a').getAttribute('aria-expanded') === 'true';
+          dropdown.querySelector('a').setAttribute('aria-expanded', !expanded);
+          menu.style.display = expanded ? 'none' : 'block';
+        }
+      });
+    });
+
+    // Dark mode toggle logic
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark" || (!currentTheme && prefersDarkScheme.matches)) {
+      document.body.classList.add("dark-mode");
+      darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      darkModeToggle.setAttribute("aria-label", "Toggle light mode");
+      darkModeToggle.setAttribute("title", "Toggle light mode");
+    }
+    darkModeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      if (document.body.classList.contains("dark-mode")) {
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        darkModeToggle.setAttribute("aria-label", "Toggle light mode");
+        darkModeToggle.setAttribute("title", "Toggle light mode");
+        localStorage.setItem("theme", "dark");
+      } else {
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        darkModeToggle.setAttribute("aria-label", "Toggle dark mode");
+        darkModeToggle.setAttribute("title", "Toggle dark mode");
+        localStorage.setItem("theme", "light");
+      }
+    });
+
+    // Search functionality
+    const pages = [
+      {title: 'Home', url: 'index.html', desc: 'Welcome and introduction to Ekau Charles literary works.'},
+      {title: 'Works', url: 'works.html', desc: 'Overview of all poetry and novels by Ekau Charles.'},
+      {title: 'Poetry', url: 'poetry.html', desc: 'Collection of poems by Ekau Charles.'},
+      {title: 'Novels', url: 'novels.html', desc: 'Explore novels written by Ekau Charles.'},
+      {title: 'About', url: 'about.html', desc: 'Learn more about Ekau Charles and his writing journey.'},
+      {title: 'Contact', url: 'contact.html', desc: 'Get in touch with Ekau Charles.'}
+    ];
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) {
+        searchResults.style.display = 'none';
+        searchResults.innerHTML = '';
+        return;
+      }
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(query) || page.desc.toLowerCase().includes(query)
+      );
+      if (filtered.length === 0) {
+        searchResults.innerHTML = '<div role="option" tabindex="0" style="padding:0.5em 0.75em;">No results found</div>';
+      } else {
+        searchResults.innerHTML = filtered.map(page =>
+          `<a href="${page.url}" role="option" tabindex="0">${page.title} - <small>${page.desc}</small></a>`
+        ).join('');
+      }
+      searchResults.style.display = 'block';
+    });
+    document.addEventListener('click', (e) => {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.style.display = 'none';
+      }
+    });
+    searchInput.addEventListener('keydown', e => {
+      const items = Array.from(searchResults.querySelectorAll('a'));
+      if (items.length === 0) return;
+      let index = items.findIndex(item => item === document.activeElement);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (index < items.length - 1) items[index + 1].focus();
+        else items[0].focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (index > 0) items[index - 1].focus();
+        else items[items.length - 1].focus();
+      } else if (e.key === 'Escape') {
+        searchInput.focus();
+        searchResults.style.display = 'none';
+      }
+    });
+
+    // Poem Modal logic
+    function openPoemModal(title, fullText) {
+      document.getElementById('poem-modal-title').textContent = title;
+      document.getElementById('poem-modal-full').textContent = fullText;
+      document.getElementById('poem-modal').style.display = 'flex';
+      document.getElementById('poem-modal').focus();
+    }
+    document.getElementById('poem-modal-close').onclick = () => {
+      document.getElementById('poem-modal').style.display = 'none';
+    };
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && document.getElementById('poem-modal').style.display === 'flex') {
+        document.getElementById('poem-modal').style.display = 'none';
+      }
+    });
+    window.addEventListener('click', e => {
+      if (e.target === document.getElementById('poem-modal')) {
+        document.getElementById('poem-modal').style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
