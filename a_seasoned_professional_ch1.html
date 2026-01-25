@@ -1,0 +1,567 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Seasoned Professional: Prologue & Chapter One | Ekau Charles</title>
+  <meta name="description" content="Prologue & Chapter One of A Seasoned Professional by Ekau Charles: A tragic car accident shatters Alex Wise's family, launching a journey of grief, resilience, and unexpected redemption." />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    :root {
+      --bg-light: #FFFFF0;
+      --bg-soft: #FFF9E6;
+      --primary: #957C3D;
+      --primary-dark: #BFA181;
+      --text-dark: #0A1828;
+    }
+    body {
+      font-family: 'Libre Baskerville', serif;
+      margin: 0;
+      background: var(--bg-light);
+      color: #333;
+      line-height: 1.6;
+      transition: background 0.4s, color 0.4s;
+    }
+    .header {
+      background: var(--primary-dark);
+      color: var(--text-dark);
+      padding: 1.2em 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+    }
+    .logo {
+      height: 100px;
+    }
+    .site-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+      color: var(--text-dark);
+    }
+    
+
+    /* Dark mode toggle styled as icon button */
+    .theme-btn {
+      background: none;
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: #0A1828;
+      margin-left: 1em;
+      transition: color 0.3s;
+    }
+    .theme-btn:hover, .theme-btn:focus {
+      color: #957C3D;
+      outline: none;
+    }
+
+    /* Action button (used for Back to All Poems) */
+    .action-btn {
+      background-color: #957C3D; color: #FFFDF8;
+      border-radius: 5px; padding: 0.38em 1.1em;
+      font-family:'League Spartan',sans-serif; font-size:1em;
+      transition: background 0.2s, color 0.2s;
+      cursor:pointer;
+      text-align: center;
+      text-decoration:none;
+      display: inline-block;
+      font-weight: 700;
+    }
+    .action-btn:hover, .action-btn:focus { background: #BFA181; color: #0A1828; }
+
+    .back-to-novels {
+      max-width: 700px;
+      margin: 1.5em auto 0;
+      padding: 0 1em;
+      display: flex;
+      align-items: center;
+    }
+    @media (max-width: 700px) {
+      .back-to-novels { max-width: 99vw; }
+    }
+    main {
+      max-width: 700px;
+      margin: 2em auto 4em;
+      padding: 0 1em;
+      background: var(--bg-soft);
+      border-radius: 0.5em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: background 0.4s, color 0.4s;
+    }
+    .novel-header {
+      display: flex;
+      gap: 1.4em;
+      align-items: flex-start;
+      margin-bottom: 1.5em;
+      flex-wrap: wrap;
+    }
+    .novel-cover { width: 120px; height: 170px; object-fit: cover; border-radius: 0.5em; flex-shrink: 0; background: #eee; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .novel-meta { flex: 1; }
+    .novel-title {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 1.55rem;
+      color: var(--text-dark);
+      margin: 0 0 0.35em 0;
+    }
+    .novel-tags {
+      font-size: 0.98rem;
+      color: var(--primary);
+      font-family: 'League Spartan', sans-serif;
+      margin-bottom: 0.4em;
+    }
+    .novel-tags span {
+      background: #F5E7C4;
+      color: var(--primary);
+      border-radius: 3px;
+      padding: 0.13em 0.7em;
+      margin-right: 0.3em;
+      display: inline-block;
+    }
+    .author-note { color: #888; font-size: 0.95em; font-style: italic; margin-bottom: 0.7em; }
+    .chapter-title {
+      font-family: 'League Spartan', sans-serif;
+      color: var(--primary);
+      margin-top: 2.5em;
+      margin-bottom: 1em;
+      font-size: 1.4rem;
+      text-align: center;
+      border-bottom: 2px solid #F5E7C4;
+      padding-bottom: 0.5em;
+    }
+    .chapter-body {
+      color: #222;
+      font-size: 1.10em;
+      margin-bottom: 2em;
+      white-space: normal;
+    }
+    .chapter-body p {
+      text-indent: 1.5em;        /* Indents first line of every paragraph */
+      margin: 0 0 0.8em 0;  /* Top/bottom spacing controlled */
+      padding: 0;
+    }
+    .chapter-body p:first-of-type {
+      text-indent: 0;  /* Flush left first paragraph */
+    }
+    .chapter-body blockquote {
+      margin: 0 0 1.2em 0;  /* Slightly more for epigraph */
+      padding-left: 1.2em;
+      border-left: 3px solid var(--primary);
+      font-style: italic;
+      text-indent: 0;            /* No indent right after epigraph */
+    }
+    .chapter-body blockquote + p {
+      text-indent: 0;  /* Flush after epigraph */
+    }
+    .cta-chapter {
+      text-align: center;
+      margin-top: 2.5em;
+      margin-bottom: 1.5em;
+    }
+    .cta-chapter .btn {
+      background-color: var(--primary);
+      color: var(--bg-light);
+      padding: 0.7em 1.5em;
+      border-radius: 4px;
+      font-family:'League Spartan',sans-serif;
+      font-weight: 700;
+      font-size: 1.12rem;
+      text-decoration: none;
+      transition: background 0.24s;
+      margin-top: 1em;
+      display: inline-block;
+    }
+    .cta-chapter .btn:hover { background: var(--primary-dark); color: var(--text-dark); }
+    @media (max-width: 700px) {
+      .novel-header { flex-direction: column; align-items: center; text-align: center; gap: 1em; }
+      .novel-cover { width: 100%; max-width: 260px; height: auto; margin-bottom: 1em; }
+      .novel-meta { text-align: center; width: 100%; } 
+      main { margin: 1em 0 2em 0; }
+    }
+    .footer {
+      background: #BFA181;
+      color: #0A1828;
+      text-align: center;
+      padding: 1.2em 0;
+      transition: background 0.4s, color 0.4s;
+    }
+    .footer a {
+      color: inherit;
+      text-decoration: underline;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 600;
+      font-size: 1em;
+      transition: color 0.2s;
+    }
+    .footer a:hover { color: #957C3D; }
+    .footer .social-icons { margin-top: 1em; }
+    .footer .social-icons a {
+      color: #0A1828;
+      margin: 0 0.18em;
+      font-size: 1.15em;
+      text-decoration: none;
+      transition: color 0.2s;
+      vertical-align: middle;
+    }
+    .footer .social-icons a:hover { color: #957C3D; }
+    .footer p { margin: 1em 0 0 0; }
+    @media (max-width: 600px) {
+      .footer { padding: 1em 0; }
+      .logo { height: 58px; }
+      .site-title { font-size: 1.3rem; }
+      .footer .social-icons { font-size: 1em; }
+    }
+
+    /* ==== DARK MODE: now matches poetry collection dark mode ==== */
+    body.dark-mode { background:#161310; color:#f7eed4 }
+    body.dark-mode main { background:#231C15; color:#ffeec1 }
+    body.dark-mode h1, body.dark-mode .site-title, body.dark-mode .novel-title, body.dark-mode .chapter-title { color:#FFD966 !important; }
+    body.dark-mode .novel-tags { color: #FFD966 !important; }
+    body.dark-mode .novel-tags span { background: #372e1a; color: #FFD966 !important; }
+    body.dark-mode .chapter-body { color: #ffeec1 !important; }
+    body.dark-mode .chapter-body p {
+      margin: 0 0 0.8em 0;
+      text-indent: 1.5em;
+    }
+    body.dark-mode .header, body.dark-mode .footer { background:#333 !important; color:#FFD966 !important; }
+    body.dark-mode .footer a, body.dark-mode .footer .social-icons a { color: #FFD966 !important; }
+    body.dark-mode .footer a:hover { color: #ffeec1 !important; }
+    body.dark-mode .back-to-novels .action-btn { background:#44401d; color:#FFD966; }
+    body.dark-mode .back-to-novels .action-btn:hover { background:#FFD966; color:#372e1a; }
+    body.dark-mode .theme-btn { color: #FFD966; }
+    body.dark-mode .theme-btn:hover, .dark-mode .theme-btn:focus { color: #FFD966; }
+    body.dark-mode .cta-chapter .btn {
+      background-color: #44401d;
+      color: #FFD966;
+    }
+    body.dark-mode .cta-chapter .btn:hover {
+      background: #FFD966;
+      color: #372e1a;
+    }
+    /* MOBILE INDENT SCALING */
+    @media (max-width: 600px) {
+      .chapter-body p {
+        text-indent: 1.2em;
+      {
+  }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <a href="index.html"><img src="img/open_trademark.webp" alt="Ekau Logo" class="logo"></a>
+      <div>
+        <div style="font-family:'Libre Baskerville',serif; font-size:1.1rem; color:#957C3D;">Official Website of</div>
+        <div class="site-title">Ekau Charles</div>
+      </div>
+      <!-- Reusable dark mode toggle with icon and aria -->
+      <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="back-to-novels">
+    <a href="novels.html" class="action-btn">
+      <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to All Novels
+    </a>
+  </div>
+
+  <main role="main">
+    <div class="novel-header">
+      <img src="covers/A_Seasoned_Professional.webp" alt="Cover of A Seasoned Professional" class="novel-cover" loading="lazy" />
+      <div class="novel-meta">
+        <h1 class="novel-title">A Seasoned Professional: Wrath of Angry Angel</h1>
+        <div class="novel-tags">
+          <span>Love</span><span>Resilience</span><span>Loss</span>
+        </div>
+        <div class="author-note">
+          Author’s note: This novel delves into the fight for truth and the lengths we go to protect loved ones.
+        </div>
+      </div>
+    </div>
+
+    <h2 class="chapter-title">Prologue: Murder</h2>
+    <div class="chapter-body">
+      <p>Marie’s lifeless body lay sprawled on the garage floor in a pool of her own blood. James knelt beside her, covered in crimson, clutching a knife as he stared at the corpse in wide-eyed shock.</p>
+
+      <p>“James?!” His gaze snapped to the door. “What have you done?”</p>
+
+      <p>“I didn’t do this! I swear, Precious—I didn’t do this.”</p>
+
+      <p>“Put the knife down, James, and step away from the body.” Precious yanked her gun from its holster and leveled it at him the moment she spotted the blade. “Put it down now!”</p>
+
+      <p>James eased the knife to the floor and raised his hands, still kneeling. “Precious, you have to believe me. I didn’t do this,” he pleaded.</p>
+
+      <p>Precious ignored him. She couldn’t tear her eyes from her sister’s corpse. With trembling fingers, she fished her phone from her back pocket and dialed 911.</p>
+
+      <p>Marie had been a good woman—a devoted wife, a loving sister. But why would James slaughter her? Why kill his own wife? The questions clawed at Precious’s mind. Sure, family drama had simmered lately, but nothing this explosive. They’d always hashed it out before. Once, James had even brushed off her growing suspicions. Still, she’d never imagined it would end like this.</p>
+
+      <p>Minutes later, the crime scene—James’s own garage—swarmed with cops. James sat cuffed in the back of a cruiser. Precious remained rooted in shock, watching paramedics bag Marie’s body and wheel it into the ambulance. She couldn’t process it. Marie was all the family she had left, and James had stolen her. Precious had warned her sister about him, even when Marie swore he was a good man. Doubts had gnawed at Precious from day one—three years as his partner on the force hadn’t built trust. She’d tried giving him the benefit of the doubt. No more.</p>
+    </div>
+    
+    <h3 class="chapter-title">Chapter One: Reunion</h3>
+    <div class="chapter-body">
+      <p>“Honey, finish your breakfast—we’re gonna be late.”</p>
+
+      <p>“We won’t.” Pearl glanced at her daughter, who shoveled cereal with single-minded focus. “I woke up early, ate ten minutes ahead of schedule, and I’m already dressed. See?”</p>
+
+      <p>Pearl arched an eyebrow. “Did you factor in traffic?” Aria’s ponytail whipped side to side as she shook her head. Pearl smiled. “Didn’t think so.”</p>
+
+      <p>The TV droned in the background. “...And today’s top headline: Cop murders his wife. Detective James W. Turner, a decorated officer with five years on the force, was caught with the murder weapon in hand, standing over his wife’s bloodied body.”</p>
+
+      <p>Pearl’s head snapped toward the screen. She snatched the remote and cranked the volume.</p>
+
+      <p>“Detective Turner was taken into custody last night.”</p>
+
+      <p>“Come on, baby—let’s go!” Pearl shut off the TV.</p>
+
+      <p>Aria bolted to the living room, grabbed her schoolbag from the chair, and dashed to the open door. Pearl buckled her into the car, then slid behind the wheel. They sang silly songs, cracked jokes, and laughed all the way to kindergarten. A teacher waited curbside as Pearl parked.</p>
+
+      <p>“Big hug and kiss for Mommy.” Aria obliged, squeezing tight. “Be good, and I’ll grab you a treat later.” Aria waved as Pearl pulled away, her smile holding firm. But the news clawed at her thoughts. James. Arrested for murder. She’d dropped Aria off safely, but her mind raced.</p>
+      
+      <!-- Scene Break -->
+      <div class="scene-break" style="text-align: center;">***</div>
+      
+      <p>“Jeremy, did you catch the news?”</p>
+      
+      <p>“Good morning to you too. Rough night?”</p>
+
+      <p>“Not now! The cop who killed his wife—did you see it?”</p>
+
+      <p>“Yeah, tragic. Why snap like that? What’s the worst a wife could do?”</p>
+
+      <p>“He<em>didn’t</em>.” Pearl jabbed a finger at him. “Dig up everything on the case. I’m taking it.” She spun toward the door.</p>
+
+      <p>“Where are you going?” Jeremy called.</p>
+
+      <p>“Eighth precinct—to see him.” The elevator doors swallowed her reply.</p>
+      
+      <!-- Scene Break -->
+      <div class="scene-break" style="text-align: center;">***</div>
+
+      <p>James slumped in the interrogation room, wrists cuffed to the table, head on the cold metal. Two hours, no questions. Branded a traitor. No time to grieve Marie. A tear escaped; he swiped it with his elbow. The door creaked open.</p>
+
+      <p>Precious. She nailed him with a venomous glare, slammed the door, and froze by the one-way mirror, biting her nails. James had been on this side of the glass plenty—interrogating, not interrogated. She’d fought for this, he knew it. Captain caved.</p>
+
+      <p>“Why’d you do it, James?” Her voice cut like ice. “Tired of her? Snapped?”</p>
+
+      <p>“I didn’t, Precious. Believe me.”</p>
+
+      <p>“I warned her about you. Called me jealous. She never listened.”</p>
+
+      <p>“I came home and found her—knife in her chest.” James’s voice rose, strained.</p>
+
+      <p>“Shut up!” Precious lunged, grabbing his collar, eyes blazing. “You killed my sister! For what—anger? Control? <em>Tell me why!</em>”</p>
+
+      <p>“I didn’t!”</p>
+
+      <p>“I’ll bury you, James. Death row if I have to.” She shoved him back; his chair teetered. She stormed out.</p>
+
+      <p>In the hall, she collided with someone. “Sorry—” Her eyes widened. “Well, if it isn’t the ex-girlfriend.”</p>
+
+      <p>“Hello, Precious.”</p> 
+      
+      <p>“Convenient timing. You two in on it together?”</p>
+
+      <p>“Excuse me?!”</p>
+      
+      <p>“Forgive Detective Hoskins’ words, Pearl—she’s grieving.”  Captain Sullivan appeared, defusing.  “You can go and see him now. And again, it’s good to see you.”</p>
+
+      <p>“You too captain.” Pearl brushed past, entered the room. James’s head stayed down.</p>
+      
+      <p>“Hello James.”</p>
+
+      <p>The voice had been familiar to James. He would never forget that voice in a million years. It was a voice he thought he would never hear again. And he would recognize that voice anywhere on the face of this world.</p>
+      
+      <p>“Pearl!” he said out the name even without lifting his head. Then he lifted his head to the door and there she was. A woman he’d never thought he’d ever see again. Pearl smiled faintly at him.</p>
+
+      <p>“You look terrible.”</p>
+      
+      <p>“Well, I’ve been through worse.” He never took his eyes off of her from when she walked from the door to where she took a seat on the chair right in front of him. “You’re the last person I expected to see here.”</p>
+
+      <p>“Didn’t plan on coming back either, James.”</p>
+      
+      <p>“What are you doing here, Pearl?”</p>
+      
+      <p>“I’m a lawyer now. And from the looks of it, I thought you needed one.”</p>
+
+      <p>“Lawyer?!” A bitter laugh escaped him.</p>
+      
+      <p>“It’s a long story. I’ll tell you all about it later. I came to help. If that’s okay.” She shrugged her shoulders. “I heard what happened!”</p>
+      
+      <p>“I didn’t kill her.”</p>
+      
+      <p>“I know, James, I know. That’s why I’m here.” She gripped his cuffed hands briefly, then pulled back, cheeks flushing.  “Tell me everything.”</p>
+      
+      <p>James recounted it all—no details spared. Pearl scribbled notes, probing with sharp questions, testing his story. She trusted him; always had. Law school drilled it: Grill clients, confirm innocence, build ironclad cases.</p>
+      
+      <p>When he finished, she flipped through her notebook. “Let’s see if we can get you out on bail. We’ll crack this together.”</p>
+
+      <p>“So, you believe me?”</p>
+      
+      <p>“I always believe you, James.” She stood, coat in hand.</p>
+      
+      <p>“Pearl—thank you.” James let out when she turned the door knob to open the door.</p>
+
+      <p>Pearl turned back and laughed softly. “It’s good to see you too again, James. Hang tight, I will be back for you.” The door clicked shut behind her.</p>
+      
+      <p>At the front desk, chaos erupted a few moments later as she walked up to the front desk to sign some papers and inquire a few things. Two suits in black flanked James, marching him out. Captain Sullivan—frozen—watched, phone in hand. Precious trailed, protesting.</p>
+      
+      <p>“What the hell is going on?”</p>
+      
+      <p>“They claim to have jurisdiction.” Precious was following right behind them protesting.</p>
+      
+      <p>“ISO—Internal Security Organization, and we do have jurisdiction!” Special Agent Will Anderson stepped forward, badge in hand and calm as stone.</p>
+      
+      <p>“We’re in the middle of an investigation.” Precious cut in.</p>
+      
+      <p>“He committed a federal crime,” Will said as Sullivan restrained Precious. “Victim was a government official. he’s a government official. So I need you and your team to stand down.”</p>
+      
+      <p>“We have reasons to believe that that man may have been working with someone else. There may be others. So you can understand why we're reluctant to hand him to you.”</p>
+      
+      <p>“I don't know anything about that.” Agent Will replied calmly and softly.</p>
+      
+      <p>“And you'd say if you did, right?” </p>
+      
+      <p>“Call your boss, call my boss, he'll call the president. They’ll all tell you the same thing. This is my case now.” Agent Will concluded and walked away to meet his two agents with James. Precious rushed and blocked the elevator. Everybody stopped and looked at her. Agent Will turned his gaze to Sullivan.</p>
+      
+      <p>After a slight hesitation, Captain Sullivan gave in. “Let them go.”</p>
+      
+      <p>“You’re just going to let this happen?” Precious asked the captain. She knew investigating him would be harder if he was taken by someone else.</p>
+
+      <p>“Stand down!” Sullivan commanded. She moved slowly out of the way and watched as Agent Will and his agents put James into the elevator. When the doors closed, Precious turned around to look at the captain who simply shrugged and said, “There’s nothing I could do.”</p>
+      
+      <p>He then turned and walked away.</p>
+      
+      <p>Precious’s gaze locked on Pearl, stunned at reception. Pearl bolted after them, catching the prisoner van just as James climbed in, shackled anew. “James! I’ll get you out!”</p>
+      
+      <p>He smiled faintly, then vanished inside.</p>
+      
+      <p>Pearl stormed back to Sullivan’s office. “You shouldn’t have let them take him.”</p>
+      
+      <p>“That wasn't my choice to make and it certainly wasn't yours.”</p>
+      
+      <p>“He was helpless. You should've fought harder to keep him in custody.”</p>
+      
+      <p>“Internal Security has jurisdiction, it was out of my hands.”</p>
+      
+      <p>Precious burst in just as Pearl was concluded her sentence, obviously a disagreement with the captain. They both turned their heads towards her direction. She then looked at the captain and he had on an expression like he was asking for her opinion. “I’m with her on this one. I don’t like her, but I’m with her on this one. If you hadn't let him go, then maybe we could still have found out something.”</p>
+      
+      <p>Sullivan slammed his palm on his table.</p>
+      
+      <p>“In this job, we all have to accept decisions that we don't agree with. It’s called chain of command.”</p>
+      
+      <p>An officer interrupted. “Captain, we're ready for you upstairs.”</p>
+      
+      <p>“You two of all people should get that.” Sullivan was now on his feet picking up a file from his desk.</p>
+      
+      <p>“One reason I quit this circus.”</p>
+      
+      <p>“Well you no longer work for the merry band, do you now? So I don’t really care what you think. And you!” Sullivan looked at Precious. “What happened earlier, you challenging me in front of ISO? That was unacceptable.”</p>
+      
+      <p>“How long has he worked for you? How long has he been loyal to you? And this is how you treat him? And here I thought that he was one of yours. I guess I was wrong after all. You know, you may all believe that James is guilty, but I know that he didn't kill his wife and I'm going to do whatever it takes to prove you wrong. All of you.” She stormed out past Precious.</p>
+      
+      <p>Precious turned to Sullivan. “Sorry for earlier. But you shouldn’t have—”</p>
+      
+      <p>“Like I told Pearl, that wasn't my call to make and it certainly wasn't yours.” He brushed past her.</p>
+      
+      <!-- Scene Break -->
+      <div class="scene-break" style="text-align: center;">***</div>
+      
+      <p>“Jeremy, get me everything you can on James’ case.”</p>
+      
+      <p>“There you are! I’ve been trying to reach you for the past hour. Where have you been?”</p>
+      
+      <p>“Down at the precinct! What do we have on the case?”</p>
+      
+      <p>“What case? Dayton station?”</p>
+      
+      <p>“Yes Jeremy. Precinct. Dayton station, James’s case—keep up.”</p>
+      
+      <p>“Pearl, in my office now.” Simon’s voice boomed. Pearl didn’t want to go to her boss’ office when he called but she had to. When she reached the office and entered, Simon had asked her to shut the door behind her.</p>
+      
+      <p>“Lawsuit update?”</p>
+      
+      <p>“The lawsuit case?!” She asked like she didn’t know what he was talking about and continued, “Delegated to Samantha. I’m on something bigger—James”</p>
+      
+      <p>“Come on Pearl, we both know you’re too attached to that case.”</p>
+      
+      <p>“I promise, I won’t let my feelings cloud my judgment.”</p>
+      
+      <p>Simon gave Pearl the look.</p>
+      
+      <p>“Please—please Simon, I need this.”</p>
+      
+      <p>As she begged, Simon watched her, remembering why he had hired her in the first place. Not for experience, of course. She had none of that at all. But her persistence and urge to find the truth had their attractions. He turned around to look at her.</p>
+      
+      <p>“Fine, you can have the case. But, no mistakes.” She kissed his cheek and fled.</p>
+      
+      <p>Jeremy had scraps: no cameras, no witnesses. Precious stonewalled, offering only a curt recap of the scene. Pearl’s leads? Dry. She’d promised James answers. Now what?</p>
+      
+      <p>Back at the office, she barked orders at Jeremy—enemies, files—until he froze. “Pearl... trial’s set.”</p>
+      
+      <p>Her boss summoned again before she could fully register Jeremy’s words. “Shut the door.” He slid over the court letter. “They know you’re his lawyer. Firm’s not on it—you are. It’s nothing personal.”</p>
+
+      <p>“I know.” She snatched it, stormed out, slumped in her chair. Sigh. Time to face James with empty hands.</p>
+      </div>
+
+    <!-- CTA unchanged -->
+    <div class="cta-chapter">
+      <p>Continue the thrilling journey...</p>
+      <a href="https://amazon.com/Seasoned-Professional-Wrath-Angry-Angel-ebook/dp/B0BN71XPQQ" class="btn" aria-label="Buy A Seasoned Professional Novel">Buy Now</a>
+    </div>
+  </main>
+
+  <div class="footer">
+    <div>
+      <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+      <a href="terms.html">Terms of Service</a> &nbsp;|&nbsp;
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/emegu.charles" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/EmeguCharles" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/charlito195" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/emegu-charles-99105b247" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ekaucharles" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=256700748964" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="margin-top:1em">&copy; 2026 Ekau Charles</p>
+    <p style="font-style: italic; font-size: 0.85rem; margin-top: 0.5em;">“Writing is the painting of the voice.”</p>
+  </div>
+
+  <!-- DARK MODE/ICON TOGGLE SCRIPT -->
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    function setTheme(dark) {
+      if (dark) {
+        document.body.classList.add('dark-mode');
+        themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        themeToggleBtn.setAttribute("aria-label", "Toggle light mode");
+        themeToggleBtn.title = "Toggle light mode";
+      } else {
+        document.body.classList.remove('dark-mode');
+        themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        themeToggleBtn.setAttribute("aria-label", "Toggle dark mode");
+        themeToggleBtn.title = "Toggle dark mode";
+      }
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+    themeToggleBtn.addEventListener('click', function() {
+      setTheme(!document.body.classList.contains('dark-mode'));
+    });
+    // On load: system or saved choice
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) setTheme(true);
+    })();
+  </script>
+</body>
+</html>
