@@ -8,7 +8,7 @@
   <meta property="og:title" content="Ekau Charles | Sitemap" />
   <meta property="og:description" content="Sitemap for Ekau Charles official website listing all pages." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ekaucharles.github.io/sitemap.html" />
+  <meta property="og:url" content="https://ekaucharles.github.io/sitemap.xml" />
   <meta property="og:image" content="https://ekaucharles.github.io/img/open_vintage_book_2.webp" />
   <link rel="preload" href="img/open_vintage_book_2.webp" as="image" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Libre+Baskerville&display=swap" as="style" />
@@ -666,3 +666,4 @@
   </script>
 </body>
 </html>
+
