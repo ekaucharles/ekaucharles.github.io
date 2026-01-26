@@ -548,7 +548,7 @@
     <div>
       <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
       <a href="terms.html">Terms of Service</a> &nbsp;|&nbsp;
-      <a href="sitemap.html" aria-current="page">Sitemap</a>
+      <a href="sitemap.html">Sitemap</a>
     </div>
     <div class="social-icons">
       <a href="https://www.facebook.com/emegu.charles" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -666,4 +666,5 @@
   </script>
 </body>
 </html>
+
 
