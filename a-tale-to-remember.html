@@ -473,6 +473,7 @@
       "You're Still the One",
       // ... extend if you have specific titles, else will be 'Poem X'
     ];
+    const amazonBookUrl = "https://amazon.com/Tale-Remember-Ekau-Emegu-Charles-ebook/dp/B0BQ5MWTR5";  // Your KDP book link
     const tocList = document.getElementById('toc-list');
     for (let i = 1; i <= 90; i++) {
       const li = document.createElement("li");
@@ -483,8 +484,8 @@
       } else if (i === 2) {
         a.href = "#poem-2"; a.textContent = title;
       } else {
-        a.href = `https://yourbookstore.com/a-tale-to-remember#poem-${i}`;
-        a.target = "_blank"; a.rel = "noopener";
+        a.href = `https://amazon.com/Tale-Remember-Ekau-Emegu-Charles-ebook/dp/B0BQ5MWTR5`;
+        a.target = "_blank"; a.rel = "noopener noreferrer";
         a.textContent = title;
       }
       li.appendChild(a);
@@ -534,6 +535,7 @@
   </script>
 </body>
 </html>
+
 
 
 
